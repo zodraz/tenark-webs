@@ -44,6 +44,9 @@ using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
+using Autofac.Core;
+using Autofac;
+using OpenId2Ids.Tenants;
 
 namespace OpenId2Ids.Web;
 
@@ -95,6 +98,9 @@ public class OpenId2IdsWebModule : AbpModule
         ConfigureNavigationServices(configuration);
         ConfigureMultiTenancy();
         ConfigureSwaggerServices(context.Services);
+
+        //var containerBuilder = context.Services.GetContainerBuilder();
+        //containerBuilder.RegisterType<MyTenantAppService>().As<IMyTenantAppService>();
     }
 
     private void ConfigureBundles()

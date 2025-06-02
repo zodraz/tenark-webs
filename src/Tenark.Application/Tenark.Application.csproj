@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Messaging.EventGrid" Version="4.30.0" />
     <PackageReference Include="Volo.Abp.Account.Application" Version="8.3.0" />
     <PackageReference Include="Volo.Abp.Identity.Application" Version="8.3.0" />
     <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="8.3.0" />

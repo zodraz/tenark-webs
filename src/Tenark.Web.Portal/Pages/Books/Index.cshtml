@@ -7,11 +7,18 @@
 @model IndexModel
 @inject IStringLocalizer<OpenId2IdsResource> L
 @inject IAuthorizationService AuthorizationService
+<script>
+    // Wrap the C# value in quotes if you know it's a plain string:
+    window.remoteServiesPath = "@Model.RemoteServiesPath";
+
+    // Now you can use `msg` in any JS code below:
+    console.log("remoteServiesPath is:",  window.remoteServiesPath);
+</script>
 @section scripts
 {
     <abp-script src="/Pages/Books/Index.js" />
 }
-<abp-card>
+@* <abp-card>
     <abp-card-header>
         <abp-row>
             <abp-column size-md="_6">
@@ -31,4 +38,126 @@
     <abp-card-body>
         <abp-table striped-rows="true" id="BooksTable"></abp-table>
     </abp-card-body>
-</abp-card>
+</abp-card> *@
+
+<h2>Book List</h2>
+
+<!-- Container where the grid (table) will be rendered -->
+<div id="gridContainer"></div>
+
+<!-- Inline styles for simplicity; feel free to move these into site.css -->
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    th, td {
+        border: 1px solid #ccc;
+        padding: 8px 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f5f5f5;
+    }
+
+    tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+</style>
+
+<!--
+    You can also place this <script> block at the bottom of the page,
+    but it’s shown here inline for clarity.
+-->
+<script>
+    // -----------------------------------------------------------------------------------------------------------------
+    // 1) Your JavaScript data object (JSON). If you prefer, you can replace
+    //    this with a Razor-rendered property, e.g.
+    // -----------------------------------------------------------------------------------------------------------------
+    const data = {
+        "totalCount": 2,
+        "items": [
+            {
+                "name": "1984",
+                "type": 3,
+                "publishDate": "1949-06-08T00:00:00",
+                "price": 19.84,
+                "lastModificationTime": null,
+                "lastModifierId": null,
+                "creationTime": "2025-05-31T19:26:04.9596596",
+                "creatorId": null,
+                "id": "c9747a11-1d55-aa46-d323-3a1a398df36b"
+            },
+            {
+                "name": "The Hitchhiker's Guide to the Galaxy",
+                "type": 7,
+                "publishDate": "1995-09-27T00:00:00",
+                "price": 42,
+                "lastModificationTime": null,
+                "lastModifierId": null,
+                "creationTime": "2025-05-31T19:26:05.0089334",
+                "creatorId": null,
+                "id": "df68b413-2370-a19e-a01d-3a1a398df3d0"
+            }
+        ]
+    };
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // 2) Function to build and render the HTML table into the container.
+    // -----------------------------------------------------------------------------------------------------------------
+    function renderGrid(containerId, dataObject) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        // Create <table> and header row
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+
+        // Define which fields/columns to display
+        const columns = ["name", "type", "publishDate", "price", "creationTime", "id"];
+
+        // Build <th> elements
+        columns.forEach(col => {
+            const th = document.createElement('th');
+            // Capitalize first letter
+            th.textContent = col.charAt(0).toUpperCase() + col.slice(1);
+            headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+
+        // Build <tbody>
+        const tbody = document.createElement('tbody');
+        dataObject.items.forEach(item => {
+            const row = document.createElement('tr');
+            columns.forEach(col => {
+                const td = document.createElement('td');
+                let cellValue = item[col];
+
+                // Format date strings to a more readable form
+                if (col === "publishDate" || col === "creationTime") {
+                    const dt = new Date(cellValue);
+                    cellValue = isNaN(dt) ? "" : dt.toLocaleString();
+                }
+
+                td.textContent = (cellValue !== null && cellValue !== undefined) ? cellValue : "";
+                row.appendChild(td);
+            });
+            tbody.appendChild(row);
+        });
+        table.appendChild(tbody);
+
+        container.appendChild(table);
+    }
+
+    // -----------------------------------------------------------------------------------------------------------------
+    // 3) When the DOM is ready, call renderGrid to populate the table.
+    // -----------------------------------------------------------------------------------------------------------------
+    document.addEventListener("DOMContentLoaded", function() {
+        renderGrid("gridContainer", data);
+    });
+</script>

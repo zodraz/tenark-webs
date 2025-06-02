@@ -155,19 +155,28 @@ public class OpenId2IdsHttpApiHostModule : AbpModule
         {
             options.AddDefaultPolicy(builder =>
             {
+                //builder
+                //    .WithOrigins(
+                //        configuration["App:CorsOrigins"]
+                //            .Split(",", StringSplitOptions.RemoveEmptyEntries)
+                //            .Select(o => o.RemovePostFix("/"))
+                //            .ToArray()
+                //    )
+                //    .WithAbpExposedHeaders()
+                //    .SetIsOriginAllowedToAllowWildcardSubdomains()
+                //    .AllowAnyHeader()
+                //    .AllowAnyMethod()
+                //    .AllowCredentials();
+
                 builder
-                    .WithOrigins(
-                        configuration["App:CorsOrigins"]
-                            .Split(",", StringSplitOptions.RemoveEmptyEntries)
-                            .Select(o => o.RemovePostFix("/"))
-                            .ToArray()
-                    )
+                    .AllowAnyOrigin()
                     .WithAbpExposedHeaders()
                     .SetIsOriginAllowedToAllowWildcardSubdomains()
                     .AllowAnyHeader()
-                    .AllowAnyMethod()
-                    .AllowCredentials();
+                    .AllowAnyMethod();
+                    //.AllowCredentials();
             });
+
         });
     }
 

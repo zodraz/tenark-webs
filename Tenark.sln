@@ -35,7 +35,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenark.Web.Portal", "src\Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenark.Application.Contracts", "src\Tenark.Application.Contracts\Tenark.Application.Contracts.csproj", "{BE901926-A91A-4513-A14A-DDB5DEAEDD1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenark.Web.ControlPlane", "src\Tenark.Web.ControlPlane\Tenark.Web.ControlPlane.csproj", "{53A2592F-521F-4C55-81E9-1A0BFA1E9ECB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tenark.Web.ControlPlane", "src\Tenark.Web.ControlPlane\Tenark.Web.ControlPlane.csproj", "{DA20CDD7-1381-4BEC-9548-54A192F828A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,10 +99,10 @@ Global
 		{BE901926-A91A-4513-A14A-DDB5DEAEDD1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE901926-A91A-4513-A14A-DDB5DEAEDD1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE901926-A91A-4513-A14A-DDB5DEAEDD1A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53A2592F-521F-4C55-81E9-1A0BFA1E9ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53A2592F-521F-4C55-81E9-1A0BFA1E9ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53A2592F-521F-4C55-81E9-1A0BFA1E9ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53A2592F-521F-4C55-81E9-1A0BFA1E9ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA20CDD7-1381-4BEC-9548-54A192F828A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA20CDD7-1381-4BEC-9548-54A192F828A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA20CDD7-1381-4BEC-9548-54A192F828A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA20CDD7-1381-4BEC-9548-54A192F828A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -122,6 +122,7 @@ Global
 		{EF480016-9127-4916-8735-D2466BDBC582} = {04DBDB01-70F4-4E06-B468-8F87850B22BE}
 		{2360ADC9-9E4E-4702-9374-49AA7921B268} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 		{BE901926-A91A-4513-A14A-DDB5DEAEDD1A} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
+		{DA20CDD7-1381-4BEC-9548-54A192F828A6} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AAFA1C6-603E-13FA-45E5-7910AA9F661D}
