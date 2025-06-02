@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OpenId2Ids.DbMigrator": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

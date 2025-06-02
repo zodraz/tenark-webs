@@ -18936,3 +18936,514 @@ Volo.Abp.Http.Client.AbpRemoteCallException: An error occurred during the ABP re
 2025-06-02 13:03:19.825 +02:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationScriptController.Get (Volo.Abp.AspNetCore.Mvc) in 95.4358ms
 2025-06-02 13:03:19.825 +02:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationScriptController.Get (Volo.Abp.AspNetCore.Mvc)'
 2025-06-02 13:03:19.826 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Abp/ApplicationConfigurationScript - 200 6641 application/javascript 135.2202ms
+2025-06-02 16:01:18.921 +02:00 [INF] Starting web host.
+2025-06-02 16:01:45.979 +02:00 [INF] Loaded ABP modules:
+2025-06-02 16:01:45.981 +02:00 [INF] - OpenId2Ids.Web.OpenId2IdsWebModule
+2025-06-02 16:01:45.981 +02:00 [INF]   - OpenId2Ids.OpenId2IdsHttpApiClientModule
+2025-06-02 16:01:45.981 +02:00 [INF]     - OpenId2Ids.OpenId2IdsApplicationContractsModule
+2025-06-02 16:01:45.981 +02:00 [INF]       - OpenId2Ids.OpenId2IdsDomainSharedModule
+2025-06-02 16:01:45.981 +02:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-06-02 16:01:45.981 +02:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-06-02 16:01:45.981 +02:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-06-02 16:01:45.981 +02:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-06-02 16:01:45.981 +02:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-06-02 16:01:45.981 +02:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-06-02 16:01:45.981 +02:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-06-02 16:01:45.981 +02:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-06-02 16:01:45.981 +02:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-06-02 16:01:45.981 +02:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-06-02 16:01:45.981 +02:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-06-02 16:01:45.981 +02:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-06-02 16:01:45.981 +02:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2025-06-02 16:01:45.982 +02:00 [INF]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-06-02 16:01:45.982 +02:00 [INF]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-06-02 16:01:45.982 +02:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2025-06-02 16:01:45.982 +02:00 [INF]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2025-06-02 16:01:45.982 +02:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-06-02 16:01:45.982 +02:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-06-02 16:01:45.982 +02:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-06-02 16:01:45.982 +02:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.IdentityServer.AbpIdentityServerDomainSharedModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2025-06-02 16:01:45.982 +02:00 [INF]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2025-06-02 16:01:45.982 +02:00 [INF]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-06-02 16:01:45.982 +02:00 [INF]             - Volo.Abp.EventBus.AbpEventBusModule
+2025-06-02 16:01:45.982 +02:00 [INF]               - Volo.Abp.Json.AbpJsonModule
+2025-06-02 16:01:45.982 +02:00 [INF]               - Volo.Abp.Guids.AbpGuidsModule
+2025-06-02 16:01:45.982 +02:00 [INF]               - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-06-02 16:01:45.982 +02:00 [INF]               - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-06-02 16:01:45.982 +02:00 [INF]           - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-06-02 16:01:45.982 +02:00 [INF]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2025-06-02 16:01:45.982 +02:00 [INF]             - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-06-02 16:01:45.982 +02:00 [INF]               - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-06-02 16:01:45.982 +02:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2025-06-02 16:01:45.982 +02:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-06-02 16:01:45.982 +02:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2025-06-02 16:01:45.982 +02:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiClientModule
+2025-06-02 16:01:45.982 +02:00 [INF]       - Volo.Abp.Http.Client.AbpHttpClientModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2025-06-02 16:01:45.982 +02:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-06-02 16:01:45.982 +02:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.Castle.AbpCastleCoreModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-06-02 16:01:45.982 +02:00 [INF]         - Volo.Abp.RemoteServices.AbpRemoteServicesModule
+2025-06-02 16:01:45.982 +02:00 [INF]     - Volo.Abp.Identity.AbpIdentityHttpApiClientModule
+2025-06-02 16:01:45.982 +02:00 [INF]     - Volo.Abp.PermissionManagement.AbpPermissionManagementHttpApiClientModule
+2025-06-02 16:01:45.982 +02:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiClientModule
+2025-06-02 16:01:45.982 +02:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiClientModule
+2025-06-02 16:01:45.982 +02:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiClientModule
+2025-06-02 16:01:45.982 +02:00 [INF]   - OpenId2Ids.OpenId2IdsHttpApiModule
+2025-06-02 16:01:45.982 +02:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2025-06-02 16:01:45.983 +02:00 [INF]       - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2025-06-02 16:01:45.983 +02:00 [INF]         - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-06-02 16:01:45.983 +02:00 [INF]           - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-06-02 16:01:45.983 +02:00 [INF]             - Volo.Abp.Auditing.AbpAuditingModule
+2025-06-02 16:01:45.983 +02:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-06-02 16:01:45.983 +02:00 [INF]           - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-06-02 16:01:45.983 +02:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-06-02 16:01:45.983 +02:00 [INF]           - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-06-02 16:01:45.983 +02:00 [INF]             - Volo.Abp.UI.AbpUiModule
+2025-06-02 16:01:45.983 +02:00 [INF]           - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-06-02 16:01:45.983 +02:00 [INF]           - Volo.Abp.Application.AbpDddApplicationModule
+2025-06-02 16:01:45.983 +02:00 [INF]             - Volo.Abp.Domain.AbpDddDomainModule
+2025-06-02 16:01:45.983 +02:00 [INF]               - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-06-02 16:01:45.983 +02:00 [INF]               - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-06-02 16:01:45.983 +02:00 [INF]               - Volo.Abp.Caching.AbpCachingModule
+2025-06-02 16:01:45.983 +02:00 [INF]                 - Volo.Abp.Serialization.AbpSerializationModule
+2025-06-02 16:01:45.983 +02:00 [INF]               - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2025-06-02 16:01:45.983 +02:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.AspNetCore.Authentication.OpenIdConnect.AbpAspNetCoreAuthenticationOpenIdConnectModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.AspNetCore.Authentication.OAuth.AbpAspNetCoreAuthenticationOAuthModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.AspNetCore.Mvc.Client.AbpAspNetCoreMvcClientModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.AspNetCore.Mvc.Client.AbpAspNetCoreMvcClientCommonModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.Http.Client.Web.AbpHttpClientWebModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-06-02 16:01:45.983 +02:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-06-02 16:01:45.983 +02:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-06-02 16:01:45.983 +02:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-06-02 16:01:45.983 +02:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-06-02 16:01:45.983 +02:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-06-02 16:01:45.983 +02:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-06-02 16:01:45.983 +02:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.SettingManagement.Web.AbpSettingManagementWebModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.Http.Client.IdentityModel.Web.AbpHttpClientIdentityModelWebModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.Http.Client.IdentityModel.AbpHttpClientIdentityModelModule
+2025-06-02 16:01:45.983 +02:00 [INF]       - Volo.Abp.IdentityModel.AbpIdentityModelModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.Identity.Web.AbpIdentityWebModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.PermissionManagement.Web.AbpPermissionManagementWebModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.TenantManagement.Web.AbpTenantManagementWebModule
+2025-06-02 16:01:45.983 +02:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementWebModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-06-02 16:01:45.983 +02:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-06-02 16:01:48.739 +02:00 [INF] User profile is available. Using 'C:\Users\abel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-02 16:01:49.582 +02:00 [INF] Initialized all ABP modules.
+2025-06-02 16:01:49.944 +02:00 [INF] Now listening on: https://localhost:44308
+2025-06-02 16:01:50.105 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-02 16:01:50.106 +02:00 [INF] Hosting environment: Development
+2025-06-02 16:01:50.106 +02:00 [INF] Content root path: D:\git_personal\tenark\tenark-webs\src\Tenark.Web.Portal
+2025-06-02 16:01:51.124 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/ - null null
+2025-06-02 16:01:52.802 +02:00 [INF] Start processing HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:01:52.806 +02:00 [INF] Sending HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:01:56.986 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Volo.Abp.Http.Client.AbpRemoteCallException: An error occurred during the ABP remote HTTP request. (No connection could be made because the target machine actively refused it. (localhost:44370)) See the inner exception for details.
+ ---> System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:44370)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Volo.Abp.Http.Client.ClientProxying.ClientProxyBase`1.RequestAsync(ClientProxyRequestContext requestContext)
+   --- End of inner exception stack trace ---
+   at Volo.Abp.Http.Client.ClientProxying.ClientProxyBase`1.RequestAsync(ClientProxyRequestContext requestContext)
+   at Volo.Abp.Http.Client.ClientProxying.ClientProxyBase`1.RequestAsync[T](ClientProxyRequestContext requestContext)
+   at Volo.Abp.Http.Client.ClientProxying.ClientProxyBase`1.RequestAsync[T](String methodName, ClientProxyRequestTypeValue arguments)
+   at Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ClientProxies.AbpApplicationConfigurationClientProxy.GetAsync(ApplicationConfigurationRequestOptions options)
+   at Volo.Abp.AspNetCore.Mvc.Client.MvcCachedApplicationConfigurationClient.GetRemoteConfigurationAsync()
+   at Volo.Abp.AspNetCore.Mvc.Client.MvcCachedApplicationConfigurationClient.<GetAsync>b__19_0()
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddAsync(TCacheKey key, Func`1 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+   at Volo.Abp.AspNetCore.Mvc.Client.MvcCachedApplicationConfigurationClient.GetAsync()
+   at Volo.Abp.AspNetCore.Mvc.Client.RemoteLanguageProvider.GetLanguagesAsync()
+   at Microsoft.AspNetCore.RequestLocalization.DefaultAbpRequestLocalizationOptionsProvider.GetLocalizationOptionsAsync()
+   at Microsoft.AspNetCore.RequestLocalization.AbpRequestLocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-02 16:01:57.214 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/ - 500 null text/html; charset=utf-8 6089.8476ms
+2025-06-02 16:01:57.343 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/_vs/browserLink - null null
+2025-06-02 16:01:57.348 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-02 16:01:57.417 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 68.7133ms
+2025-06-02 16:01:57.626 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/_vs/browserLink - 200 null text/javascript; charset=UTF-8 282.3888ms
+2025-06-02 16:02:59.894 +02:00 [INF] Starting web host.
+2025-06-02 16:03:08.103 +02:00 [INF] Loaded ABP modules:
+2025-06-02 16:03:08.107 +02:00 [INF] - OpenId2Ids.Web.OpenId2IdsWebModule
+2025-06-02 16:03:08.107 +02:00 [INF]   - OpenId2Ids.OpenId2IdsHttpApiClientModule
+2025-06-02 16:03:08.107 +02:00 [INF]     - OpenId2Ids.OpenId2IdsApplicationContractsModule
+2025-06-02 16:03:08.107 +02:00 [INF]       - OpenId2Ids.OpenId2IdsDomainSharedModule
+2025-06-02 16:03:08.107 +02:00 [INF]         - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2025-06-02 16:03:08.107 +02:00 [INF]           - Volo.Abp.Validation.AbpValidationModule
+2025-06-02 16:03:08.107 +02:00 [INF]             - Volo.Abp.Validation.AbpValidationAbstractionsModule
+2025-06-02 16:03:08.107 +02:00 [INF]             - Volo.Abp.Localization.AbpLocalizationModule
+2025-06-02 16:03:08.107 +02:00 [INF]               - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2025-06-02 16:03:08.107 +02:00 [INF]               - Volo.Abp.Settings.AbpSettingsModule
+2025-06-02 16:03:08.107 +02:00 [INF]                 - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2025-06-02 16:03:08.107 +02:00 [INF]                 - Volo.Abp.Security.AbpSecurityModule
+2025-06-02 16:03:08.107 +02:00 [INF]                 - Volo.Abp.Data.AbpDataModule
+2025-06-02 16:03:08.107 +02:00 [INF]                   - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2025-06-02 16:03:08.107 +02:00 [INF]                   - Volo.Abp.Uow.AbpUnitOfWorkModule
+2025-06-02 16:03:08.107 +02:00 [INF]                   - Volo.Abp.EventBus.Abstractions.AbpEventBusAbstractionsModule
+2025-06-02 16:03:08.107 +02:00 [INF]               - Volo.Abp.Threading.AbpThreadingModule
+2025-06-02 16:03:08.107 +02:00 [INF]         - Volo.Abp.BackgroundJobs.AbpBackgroundJobsDomainSharedModule
+2025-06-02 16:03:08.107 +02:00 [INF]         - Volo.Abp.FeatureManagement.AbpFeatureManagementDomainSharedModule
+2025-06-02 16:03:08.107 +02:00 [INF]           - Volo.Abp.Json.SystemTextJson.AbpJsonSystemTextJsonModule
+2025-06-02 16:03:08.107 +02:00 [INF]             - Volo.Abp.Json.AbpJsonAbstractionsModule
+2025-06-02 16:03:08.107 +02:00 [INF]             - Volo.Abp.Timing.AbpTimingModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.Users.AbpUsersDomainSharedModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.Features.AbpFeaturesModule
+2025-06-02 16:03:08.108 +02:00 [INF]             - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2025-06-02 16:03:08.108 +02:00 [INF]               - Volo.Abp.MultiTenancy.AbpMultiTenancyAbstractionsModule
+2025-06-02 16:03:08.108 +02:00 [INF]             - Volo.Abp.Authorization.AbpAuthorizationAbstractionsModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.IdentityServer.AbpIdentityServerDomainSharedModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.Account.AbpAccountApplicationContractsModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.Users.AbpUsersAbstractionModule
+2025-06-02 16:03:08.108 +02:00 [INF]             - Volo.Abp.EventBus.AbpEventBusModule
+2025-06-02 16:03:08.108 +02:00 [INF]               - Volo.Abp.Json.AbpJsonModule
+2025-06-02 16:03:08.108 +02:00 [INF]               - Volo.Abp.Guids.AbpGuidsModule
+2025-06-02 16:03:08.108 +02:00 [INF]               - Volo.Abp.BackgroundWorkers.AbpBackgroundWorkersModule
+2025-06-02 16:03:08.108 +02:00 [INF]               - Volo.Abp.DistributedLocking.AbpDistributedLockingAbstractionsModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.Authorization.AbpAuthorizationModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2025-06-02 16:03:08.108 +02:00 [INF]             - Volo.Abp.Application.AbpDddApplicationContractsModule
+2025-06-02 16:03:08.108 +02:00 [INF]               - Volo.Abp.Auditing.AbpAuditingContractsModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementApplicationContractsModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.SettingManagement.AbpSettingManagementApplicationContractsModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.TenantManagement.AbpTenantManagementApplicationContractsModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiClientModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.Http.Client.AbpHttpClientModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.Http.AbpHttpModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.Http.AbpHttpAbstractionsModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.Minify.AbpMinifyModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.Castle.AbpCastleCoreModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.ExceptionHandling.AbpExceptionHandlingModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.RemoteServices.AbpRemoteServicesModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.Identity.AbpIdentityHttpApiClientModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.PermissionManagement.AbpPermissionManagementHttpApiClientModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiClientModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiClientModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiClientModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - OpenId2Ids.OpenId2IdsHttpApiModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.Account.AbpAccountHttpApiModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2025-06-02 16:03:08.108 +02:00 [INF]             - Volo.Abp.Auditing.AbpAuditingModule
+2025-06-02 16:03:08.108 +02:00 [INF]             - Volo.Abp.AspNetCore.AbpAspNetCoreAbstractionsModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.UI.Navigation.AbpUiNavigationModule
+2025-06-02 16:03:08.108 +02:00 [INF]             - Volo.Abp.UI.AbpUiModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.GlobalFeatures.AbpGlobalFeaturesModule
+2025-06-02 16:03:08.108 +02:00 [INF]           - Volo.Abp.Application.AbpDddApplicationModule
+2025-06-02 16:03:08.108 +02:00 [INF]             - Volo.Abp.Domain.AbpDddDomainModule
+2025-06-02 16:03:08.108 +02:00 [INF]               - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2025-06-02 16:03:08.108 +02:00 [INF]               - Volo.Abp.Specifications.AbpSpecificationsModule
+2025-06-02 16:03:08.108 +02:00 [INF]               - Volo.Abp.Caching.AbpCachingModule
+2025-06-02 16:03:08.108 +02:00 [INF]                 - Volo.Abp.Serialization.AbpSerializationModule
+2025-06-02 16:03:08.108 +02:00 [INF]               - Volo.Abp.Domain.AbpDddDomainSharedModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.PermissionManagement.HttpApi.AbpPermissionManagementHttpApiModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.TenantManagement.AbpTenantManagementHttpApiModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.FeatureManagement.AbpFeatureManagementHttpApiModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.SettingManagement.AbpSettingManagementHttpApiModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.AspNetCore.Authentication.OpenIdConnect.AbpAspNetCoreAuthenticationOpenIdConnectModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.AspNetCore.Authentication.OAuth.AbpAspNetCoreAuthenticationOAuthModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.AspNetCore.Mvc.Client.AbpAspNetCoreMvcClientModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.AspNetCore.Mvc.Client.AbpAspNetCoreMvcClientCommonModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.Http.Client.Web.AbpHttpClientWebModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite.AbpAspNetCoreMvcUiLeptonXLiteThemeModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.AbpAspNetCoreMvcUiThemeSharedModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.AbpAspNetCoreMvcUiBootstrapModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.AbpAspNetCoreMvcUiModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Packages.AbpAspNetCoreMvcUiPackagesModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingAbstractionsModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.AspNetCore.Mvc.UI.Widgets.AbpAspNetCoreMvcUiWidgetsModule
+2025-06-02 16:03:08.108 +02:00 [INF]         - Volo.Abp.AspNetCore.Mvc.UI.Bundling.AbpAspNetCoreMvcUiBundlingModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy.AbpAspNetCoreMvcUiMultiTenancyModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.Autofac.AbpAutofacModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.Caching.StackExchangeRedis.AbpCachingStackExchangeRedisModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.DistributedLocking.AbpDistributedLockingModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.SettingManagement.Web.AbpSettingManagementWebModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.Http.Client.IdentityModel.Web.AbpHttpClientIdentityModelWebModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.Http.Client.IdentityModel.AbpHttpClientIdentityModelModule
+2025-06-02 16:03:08.108 +02:00 [INF]       - Volo.Abp.IdentityModel.AbpIdentityModelModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.Identity.Web.AbpIdentityWebModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.PermissionManagement.Web.AbpPermissionManagementWebModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.TenantManagement.Web.AbpTenantManagementWebModule
+2025-06-02 16:03:08.108 +02:00 [INF]     - Volo.Abp.FeatureManagement.AbpFeatureManagementWebModule
+2025-06-02 16:03:08.108 +02:00 [INF]   - Volo.Abp.AspNetCore.Serilog.AbpAspNetCoreSerilogModule
+2025-06-02 16:03:08.109 +02:00 [INF]   - Volo.Abp.Swashbuckle.AbpSwashbuckleModule
+2025-06-02 16:03:09.430 +02:00 [INF] User profile is available. Using 'C:\Users\abel\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-06-02 16:03:10.373 +02:00 [INF] Initialized all ABP modules.
+2025-06-02 16:03:10.993 +02:00 [INF] Now listening on: https://localhost:44308
+2025-06-02 16:03:11.262 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-02 16:03:11.263 +02:00 [INF] Hosting environment: Development
+2025-06-02 16:03:11.263 +02:00 [INF] Content root path: D:\git_personal\tenark\tenark-webs\src\Tenark.Web.Portal
+2025-06-02 16:03:12.476 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/ - null null
+2025-06-02 16:03:14.225 +02:00 [INF] Start processing HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:03:14.227 +02:00 [INF] Sending HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:03:18.470 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Volo.Abp.Http.Client.AbpRemoteCallException: An error occurred during the ABP remote HTTP request. (No connection could be made because the target machine actively refused it. (localhost:44370)) See the inner exception for details.
+ ---> System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:44370)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|5_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Volo.Abp.Http.Client.ClientProxying.ClientProxyBase`1.RequestAsync(ClientProxyRequestContext requestContext)
+   --- End of inner exception stack trace ---
+   at Volo.Abp.Http.Client.ClientProxying.ClientProxyBase`1.RequestAsync(ClientProxyRequestContext requestContext)
+   at Volo.Abp.Http.Client.ClientProxying.ClientProxyBase`1.RequestAsync[T](ClientProxyRequestContext requestContext)
+   at Volo.Abp.Http.Client.ClientProxying.ClientProxyBase`1.RequestAsync[T](String methodName, ClientProxyRequestTypeValue arguments)
+   at Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ClientProxies.AbpApplicationConfigurationClientProxy.GetAsync(ApplicationConfigurationRequestOptions options)
+   at Volo.Abp.AspNetCore.Mvc.Client.MvcCachedApplicationConfigurationClient.GetRemoteConfigurationAsync()
+   at Volo.Abp.AspNetCore.Mvc.Client.MvcCachedApplicationConfigurationClient.<GetAsync>b__19_0()
+   at Volo.Abp.Caching.DistributedCache`2.GetOrAddAsync(TCacheKey key, Func`1 factory, Func`1 optionsFactory, Nullable`1 hideErrors, Boolean considerUow, CancellationToken token)
+   at Volo.Abp.AspNetCore.Mvc.Client.MvcCachedApplicationConfigurationClient.GetAsync()
+   at Volo.Abp.AspNetCore.Mvc.Client.RemoteLanguageProvider.GetLanguagesAsync()
+   at Microsoft.AspNetCore.RequestLocalization.DefaultAbpRequestLocalizationOptionsProvider.GetLocalizationOptionsAsync()
+   at Microsoft.AspNetCore.RequestLocalization.AbpRequestLocalizationMiddleware.InvokeAsync(HttpContext context, RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-02 16:03:18.743 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/ - 500 null text/html; charset=utf-8 6270.7697ms
+2025-06-02 16:03:18.875 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/_vs/browserLink - null null
+2025-06-02 16:03:18.881 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-02 16:03:18.917 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 35.848ms
+2025-06-02 16:03:19.153 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/_vs/browserLink - 200 null text/javascript; charset=UTF-8 277.7164ms
+2025-06-02 16:03:49.239 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/ - null null
+2025-06-02 16:03:49.382 +02:00 [INF] Start processing HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:03:49.382 +02:00 [INF] Sending HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:03:56.634 +02:00 [INF] Received HTTP response headers after 7245.1753ms - 200
+2025-06-02 16:03:56.635 +02:00 [INF] End processing HTTP request after 7252.1447ms - 200
+2025-06-02 16:03:56.781 +02:00 [INF] Start processing HTTP request GET https://localhost:44370/api/abp/application-localization?CultureName=en-GB&OnlyDynamics=True&api-version=1.0
+2025-06-02 16:03:56.784 +02:00 [INF] Sending HTTP request GET https://localhost:44370/api/abp/application-localization?CultureName=en-GB&OnlyDynamics=True&api-version=1.0
+2025-06-02 16:03:57.008 +02:00 [INF] Received HTTP response headers after 223.6134ms - 200
+2025-06-02 16:03:57.008 +02:00 [INF] End processing HTTP request after 226.5667ms - 200
+2025-06-02 16:04:24.586 +02:00 [INF] Executing endpoint '/Index'
+2025-06-02 16:04:24.621 +02:00 [INF] Route matched with {page = "/Index", action = "", controller = "", area = ""}. Executing page /Index
+2025-06-02 16:04:24.626 +02:00 [INF] Skipping the execution of current filter as its not the most effective filter implementing the policy Microsoft.AspNetCore.Mvc.ViewFeatures.IAntiforgeryPolicy
+2025-06-02 16:04:24.650 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-06-02 16:04:24.651 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-02 16:04:24.785 +02:00 [INF] Start processing HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:04:24.785 +02:00 [INF] Sending HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:04:24.917 +02:00 [INF] Received HTTP response headers after 130.9832ms - 200
+2025-06-02 16:04:24.917 +02:00 [INF] End processing HTTP request after 131.8943ms - 200
+2025-06-02 16:04:24.920 +02:00 [INF] Start processing HTTP request GET https://localhost:44370/api/abp/application-localization?CultureName=en&OnlyDynamics=True&api-version=1.0
+2025-06-02 16:04:24.920 +02:00 [INF] Sending HTTP request GET https://localhost:44370/api/abp/application-localization?CultureName=en&OnlyDynamics=True&api-version=1.0
+2025-06-02 16:04:24.949 +02:00 [INF] Received HTTP response headers after 28.7865ms - 200
+2025-06-02 16:04:24.949 +02:00 [INF] End processing HTTP request after 29.095ms - 200
+2025-06-02 16:04:25.304 +02:00 [ERR] Could not find the bundle file '/global-styles.css' for the bundle 'LeptonXLite.Global'!
+2025-06-02 16:04:25.305 +02:00 [DBG] Added bundle 'LeptonXLite.Global' to the page in 28.29 ms.
+2025-06-02 16:04:25.325 +02:00 [DBG] Added bundle 'Pages.Index' to the page in 2.07 ms.
+2025-06-02 16:04:26.018 +02:00 [DBG] Added bundle 'LeptonXLite.Global' to the page in 18.05 ms.
+2025-06-02 16:04:26.032 +02:00 [DBG] Added bundle 'Pages.Index' to the page in 0.91 ms.
+2025-06-02 16:04:26.072 +02:00 [INF] Executed page /Index in 1442.6392ms
+2025-06-02 16:04:26.073 +02:00 [INF] Executed endpoint '/Index'
+2025-06-02 16:04:26.091 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/ - 200 null text/html; charset=utf-8 36855.0218ms
+2025-06-02 16:04:26.548 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-02 16:04:26.548 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/Abp/ApplicationConfigurationScript - null null
+2025-06-02 16:04:26.552 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 4.5085ms
+2025-06-02 16:04:26.558 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/Abp/ApplicationLocalizationScript?cultureName=en - null null
+2025-06-02 16:04:26.573 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/Abp/ServiceProxyScript - null null
+2025-06-02 16:04:26.607 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/_vs/browserLink - null null
+2025-06-02 16:04:26.655 +02:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationScriptController.Get (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:26.689 +02:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.Localization.AbpApplicationLocalizationScriptController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:26.746 +02:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ProxyScripting.AbpServiceProxyScriptController.GetAll (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:26.752 +02:00 [INF] Route matched with {area = "Abp", action = "Get", controller = "AbpApplicationConfigurationScript", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Get() on controller Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationScriptController (Volo.Abp.AspNetCore.Mvc).
+2025-06-02 16:04:26.773 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/_vs/browserLink - 200 null text/javascript; charset=UTF-8 166.237ms
+2025-06-02 16:04:26.780 +02:00 [INF] Route matched with {area = "Abp", action = "Get", controller = "AbpApplicationLocalizationScript", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAsync(Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationRequestDto) on controller Volo.Abp.AspNetCore.Mvc.Localization.AbpApplicationLocalizationScriptController (Volo.Abp.AspNetCore.Mvc).
+2025-06-02 16:04:26.781 +02:00 [INF] Route matched with {area = "Abp", action = "GetAll", controller = "AbpServiceProxyScript", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAll(Volo.Abp.AspNetCore.Mvc.ProxyScripting.ServiceProxyGenerationModel) on controller Volo.Abp.AspNetCore.Mvc.ProxyScripting.AbpServiceProxyScriptController (Volo.Abp.AspNetCore.Mvc).
+2025-06-02 16:04:27.201 +02:00 [DBG] ActionApiDescriptionModel.Create: Account.RegisterAsyncByInput
+2025-06-02 16:04:27.258 +02:00 [DBG] ActionApiDescriptionModel.Create: Account.SendPasswordResetCodeAsyncByInput
+2025-06-02 16:04:27.259 +02:00 [DBG] ActionApiDescriptionModel.Create: Account.VerifyPasswordResetTokenAsyncByInput
+2025-06-02 16:04:27.262 +02:00 [DBG] ActionApiDescriptionModel.Create: Account.ResetPasswordAsyncByInput
+2025-06-02 16:04:27.266 +02:00 [DBG] ActionApiDescriptionModel.Create: DynamicClaims.RefreshAsync
+2025-06-02 16:04:27.267 +02:00 [DBG] ActionApiDescriptionModel.Create: Profile.GetAsync
+2025-06-02 16:04:27.268 +02:00 [DBG] ActionApiDescriptionModel.Create: Profile.UpdateAsyncByInput
+2025-06-02 16:04:27.268 +02:00 [DBG] ActionApiDescriptionModel.Create: Profile.ChangePasswordAsyncByInput
+2025-06-02 16:04:27.269 +02:00 [DBG] ActionApiDescriptionModel.Create: AbpTenant.FindTenantByNameAsyncByName
+2025-06-02 16:04:27.270 +02:00 [DBG] ActionApiDescriptionModel.Create: AbpTenant.FindTenantByIdAsyncById
+2025-06-02 16:04:27.271 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.GetAllListAsync
+2025-06-02 16:04:27.271 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.GetListAsyncByInput
+2025-06-02 16:04:27.274 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.GetAsyncById
+2025-06-02 16:04:27.275 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.CreateAsyncByInput
+2025-06-02 16:04:27.275 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.UpdateAsyncByIdAndInput
+2025-06-02 16:04:27.276 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityRole.DeleteAsyncById
+2025-06-02 16:04:27.278 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.GetAsyncById
+2025-06-02 16:04:27.278 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.GetListAsyncByInput
+2025-06-02 16:04:27.279 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.CreateAsyncByInput
+2025-06-02 16:04:27.280 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.UpdateAsyncByIdAndInput
+2025-06-02 16:04:27.280 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.DeleteAsyncById
+2025-06-02 16:04:27.281 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.GetRolesAsyncById
+2025-06-02 16:04:27.281 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.GetAssignableRolesAsync
+2025-06-02 16:04:27.281 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.UpdateRolesAsyncByIdAndInput
+2025-06-02 16:04:27.282 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.FindByUsernameAsyncByUserName
+2025-06-02 16:04:27.283 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUser.FindByEmailAsyncByEmail
+2025-06-02 16:04:27.284 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserLookup.FindByIdAsyncById
+2025-06-02 16:04:27.285 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserLookup.FindByUserNameAsyncByUserName
+2025-06-02 16:04:27.285 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserLookup.SearchAsyncByInput
+2025-06-02 16:04:27.289 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserLookup.GetCountAsyncByInput
+2025-06-02 16:04:27.291 +02:00 [DBG] ActionApiDescriptionModel.Create: Permissions.GetAsyncByProviderNameAndProviderKey
+2025-06-02 16:04:27.292 +02:00 [DBG] ActionApiDescriptionModel.Create: Permissions.UpdateAsyncByProviderNameAndProviderKeyAndInput
+2025-06-02 16:04:27.293 +02:00 [DBG] ActionApiDescriptionModel.Create: EmailSettings.GetAsync
+2025-06-02 16:04:27.296 +02:00 [DBG] ActionApiDescriptionModel.Create: EmailSettings.UpdateAsyncByInput
+2025-06-02 16:04:27.297 +02:00 [DBG] ActionApiDescriptionModel.Create: EmailSettings.SendTestEmailAsyncByInput
+2025-06-02 16:04:27.298 +02:00 [DBG] ActionApiDescriptionModel.Create: TimeZoneSettings.GetAsync
+2025-06-02 16:04:27.300 +02:00 [DBG] ActionApiDescriptionModel.Create: TimeZoneSettings.GetTimezonesAsync
+2025-06-02 16:04:27.301 +02:00 [DBG] ActionApiDescriptionModel.Create: TimeZoneSettings.UpdateAsyncByTimezone
+2025-06-02 16:04:27.303 +02:00 [DBG] ActionApiDescriptionModel.Create: Tenant.GetAsyncById
+2025-06-02 16:04:27.303 +02:00 [DBG] ActionApiDescriptionModel.Create: Tenant.GetListAsyncByInput
+2025-06-02 16:04:27.304 +02:00 [DBG] ActionApiDescriptionModel.Create: Tenant.CreateAsyncByInput
+2025-06-02 16:04:27.305 +02:00 [DBG] ActionApiDescriptionModel.Create: Tenant.UpdateAsyncByIdAndInput
+2025-06-02 16:04:27.305 +02:00 [DBG] ActionApiDescriptionModel.Create: Tenant.DeleteAsyncById
+2025-06-02 16:04:27.306 +02:00 [DBG] ActionApiDescriptionModel.Create: Tenant.GetDefaultConnectionStringAsyncById
+2025-06-02 16:04:27.308 +02:00 [DBG] ActionApiDescriptionModel.Create: Tenant.UpdateDefaultConnectionStringAsyncByIdAndDefaultConnectionString
+2025-06-02 16:04:27.309 +02:00 [DBG] ActionApiDescriptionModel.Create: Tenant.DeleteDefaultConnectionStringAsyncById
+2025-06-02 16:04:27.310 +02:00 [DBG] ActionApiDescriptionModel.Create: Features.GetAsyncByProviderNameAndProviderKey
+2025-06-02 16:04:27.311 +02:00 [DBG] ActionApiDescriptionModel.Create: Features.UpdateAsyncByProviderNameAndProviderKeyAndInput
+2025-06-02 16:04:27.312 +02:00 [DBG] ActionApiDescriptionModel.Create: Features.DeleteAsyncByProviderNameAndProviderKey
+2025-06-02 16:04:27.313 +02:00 [DBG] ActionApiDescriptionModel.Create: AbpApplicationConfiguration.GetAsyncByOptions
+2025-06-02 16:04:27.314 +02:00 [DBG] ActionApiDescriptionModel.Create: AbpApplicationLocalization.GetAsyncByInput
+2025-06-02 16:04:27.315 +02:00 [DBG] ActionApiDescriptionModel.Create: AbpApiDefinition.GetByModel
+2025-06-02 16:04:27.316 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserIntegrationClientProxy.GetRoleNamesAsyncById
+2025-06-02 16:04:27.317 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserIntegrationClientProxy.FindByIdAsyncById
+2025-06-02 16:04:27.317 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserIntegrationClientProxy.FindByUserNameAsyncByUserName
+2025-06-02 16:04:27.318 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserIntegrationClientProxy.SearchAsyncByInput
+2025-06-02 16:04:27.320 +02:00 [DBG] ActionApiDescriptionModel.Create: IdentityUserIntegrationClientProxy.GetCountAsyncByInput
+2025-06-02 16:04:27.322 +02:00 [DBG] ActionApiDescriptionModel.Create: PermissionIntegrationClientProxy.IsGrantedAsyncByInput
+2025-06-02 16:04:27.414 +02:00 [DBG] Executing AbpApplicationConfigurationAppService.GetAsync()...
+2025-06-02 16:04:27.454 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/javascript
+2025-06-02 16:04:27.460 +02:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ProxyScripting.AbpServiceProxyScriptController.GetAll (Volo.Abp.AspNetCore.Mvc) in 676.932ms
+2025-06-02 16:04:27.460 +02:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ProxyScripting.AbpServiceProxyScriptController.GetAll (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:27.462 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Abp/ServiceProxyScript - 200 2828 application/javascript 889.1649ms
+2025-06-02 16:04:27.711 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/javascript
+2025-06-02 16:04:27.729 +02:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.Localization.AbpApplicationLocalizationScriptController.GetAsync (Volo.Abp.AspNetCore.Mvc) in 949.1497ms
+2025-06-02 16:04:27.729 +02:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.Localization.AbpApplicationLocalizationScriptController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:27.730 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Abp/ApplicationLocalizationScript?cultureName=en - 200 39455 application/javascript 1171.2595ms
+2025-06-02 16:04:28.087 +02:00 [DBG] Executed AbpApplicationConfigurationAppService.GetAsync().
+2025-06-02 16:04:28.303 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/javascript
+2025-06-02 16:04:28.310 +02:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationScriptController.Get (Volo.Abp.AspNetCore.Mvc) in 1556.1359ms
+2025-06-02 16:04:28.310 +02:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationScriptController.Get (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:28.311 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Abp/ApplicationConfigurationScript - 200 6641 application/javascript 1763.492ms
+2025-06-02 16:04:45.866 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/Books - null null
+2025-06-02 16:04:46.544 +02:00 [INF] Start processing HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:04:46.544 +02:00 [INF] Sending HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:04:46.631 +02:00 [INF] Received HTTP response headers after 86.3131ms - 200
+2025-06-02 16:04:46.631 +02:00 [INF] End processing HTTP request after 86.5614ms - 200
+2025-06-02 16:04:46.632 +02:00 [INF] Start processing HTTP request GET https://localhost:44370/api/abp/application-localization?CultureName=en&OnlyDynamics=True&api-version=1.0
+2025-06-02 16:04:46.632 +02:00 [INF] Sending HTTP request GET https://localhost:44370/api/abp/application-localization?CultureName=en&OnlyDynamics=True&api-version=1.0
+2025-06-02 16:04:46.650 +02:00 [INF] Received HTTP response headers after 18.0391ms - 200
+2025-06-02 16:04:46.651 +02:00 [INF] End processing HTTP request after 18.2489ms - 200
+2025-06-02 16:04:46.665 +02:00 [INF] Executing endpoint '/Books/Index'
+2025-06-02 16:04:46.673 +02:00 [INF] Route matched with {page = "/Books/Index", action = "", controller = "", area = ""}. Executing page /Books/Index
+2025-06-02 16:04:46.673 +02:00 [INF] Skipping the execution of current filter as its not the most effective filter implementing the policy Microsoft.AspNetCore.Mvc.ViewFeatures.IAntiforgeryPolicy
+2025-06-02 16:04:46.683 +02:00 [INF] Executing handler method Tenark.Web.Portal.Pages.Books.IndexModel.OnGet - ModelState is "Valid"
+2025-06-02 16:04:46.683 +02:00 [INF] Executed handler method OnGet, returned result .
+2025-06-02 16:04:46.683 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-06-02 16:04:46.683 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-06-02 16:04:46.699 +02:00 [ERR] Could not find the bundle file '/global-styles.css' for the bundle 'LeptonXLite.Global'!
+2025-06-02 16:04:46.699 +02:00 [DBG] Added bundle 'LeptonXLite.Global' to the page in 3.08 ms.
+2025-06-02 16:04:46.713 +02:00 [DBG] Added bundle 'LeptonXLite.Global' to the page in 3.23 ms.
+2025-06-02 16:04:46.716 +02:00 [DBG] Added bundle 'Pages.Books.Index' to the page in 0.27 ms.
+2025-06-02 16:04:46.720 +02:00 [INF] Executed page /Books/Index in 47.7351ms
+2025-06-02 16:04:46.721 +02:00 [INF] Executed endpoint '/Books/Index'
+2025-06-02 16:04:46.723 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Books - 200 null text/html; charset=utf-8 856.8532ms
+2025-06-02 16:04:46.848 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/Abp/ApplicationLocalizationScript?cultureName=en - null null
+2025-06-02 16:04:46.856 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/Abp/ServiceProxyScript - null null
+2025-06-02 16:04:46.856 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/Abp/ApplicationConfigurationScript - null null
+2025-06-02 16:04:46.858 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/_framework/aspnetcore-browser-refresh.js - null null
+2025-06-02 16:04:46.859 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/_vs/browserLink - null null
+2025-06-02 16:04:46.860 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/Pages/Books/Index.js?_v=638844153239112050 - null null
+2025-06-02 16:04:46.867 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/_framework/aspnetcore-browser-refresh.js - 200 13770 application/javascript; charset=utf-8 8.2518ms
+2025-06-02 16:04:46.933 +02:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ProxyScripting.AbpServiceProxyScriptController.GetAll (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:46.933 +02:00 [INF] Route matched with {area = "Abp", action = "GetAll", controller = "AbpServiceProxyScript", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetAll(Volo.Abp.AspNetCore.Mvc.ProxyScripting.ServiceProxyGenerationModel) on controller Volo.Abp.AspNetCore.Mvc.ProxyScripting.AbpServiceProxyScriptController (Volo.Abp.AspNetCore.Mvc).
+2025-06-02 16:04:46.949 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/javascript
+2025-06-02 16:04:46.950 +02:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ProxyScripting.AbpServiceProxyScriptController.GetAll (Volo.Abp.AspNetCore.Mvc) in 16.5819ms
+2025-06-02 16:04:46.950 +02:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ProxyScripting.AbpServiceProxyScriptController.GetAll (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:46.964 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Abp/ServiceProxyScript - 200 2828 application/javascript 108.4484ms
+2025-06-02 16:04:46.976 +02:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationScriptController.Get (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:46.976 +02:00 [INF] Executing endpoint 'Volo.Abp.AspNetCore.Mvc.Localization.AbpApplicationLocalizationScriptController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:46.978 +02:00 [INF] Route matched with {area = "Abp", action = "Get", controller = "AbpApplicationLocalizationScript", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetAsync(Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.ApplicationLocalizationRequestDto) on controller Volo.Abp.AspNetCore.Mvc.Localization.AbpApplicationLocalizationScriptController (Volo.Abp.AspNetCore.Mvc).
+2025-06-02 16:04:46.978 +02:00 [INF] Route matched with {area = "Abp", action = "Get", controller = "AbpApplicationConfigurationScript", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Get() on controller Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationScriptController (Volo.Abp.AspNetCore.Mvc).
+2025-06-02 16:04:47.020 +02:00 [INF] The file /Pages/Books/Index.js was not modified
+2025-06-02 16:04:47.021 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/_vs/browserLink - 200 null text/javascript; charset=UTF-8 161.0987ms
+2025-06-02 16:04:47.023 +02:00 [DBG] Executing AbpApplicationConfigurationAppService.GetAsync()...
+2025-06-02 16:04:47.024 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Pages/Books/Index.js?_v=638844153239112050 - 304 null application/javascript 164.3645ms
+2025-06-02 16:04:47.094 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/javascript
+2025-06-02 16:04:47.099 +02:00 [DBG] Executed AbpApplicationConfigurationAppService.GetAsync().
+2025-06-02 16:04:47.099 +02:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.Localization.AbpApplicationLocalizationScriptController.GetAsync (Volo.Abp.AspNetCore.Mvc) in 121.2594ms
+2025-06-02 16:04:47.099 +02:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.Localization.AbpApplicationLocalizationScriptController.GetAsync (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:47.100 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Abp/ApplicationLocalizationScript?cultureName=en - 200 39455 application/javascript 251.7746ms
+2025-06-02 16:04:47.109 +02:00 [INF] Executing ContentResult with HTTP Response ContentType of application/javascript
+2025-06-02 16:04:47.118 +02:00 [INF] Executed action Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationScriptController.Get (Volo.Abp.AspNetCore.Mvc) in 140.3125ms
+2025-06-02 16:04:47.118 +02:00 [INF] Executed endpoint 'Volo.Abp.AspNetCore.Mvc.ApplicationConfigurations.AbpApplicationConfigurationScriptController.Get (Volo.Abp.AspNetCore.Mvc)'
+2025-06-02 16:04:47.119 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Abp/ApplicationConfigurationScript - 200 6641 application/javascript 263.2062ms
+2025-06-02 16:05:08.236 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44308/Books - null null
+2025-06-02 16:05:08.263 +02:00 [WRN] Could not find IdentityClientConfiguration for AbpMvcClient. Either define a configuration for AbpMvcClient or set a default configuration.
+2025-06-02 16:05:08.264 +02:00 [INF] Start processing HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:05:08.264 +02:00 [INF] Sending HTTP request GET https://localhost:44370/api/abp/application-configuration?IncludeLocalizationResources=False&api-version=1.0
+2025-06-02 16:05:08.327 +02:00 [INF] Received HTTP response headers after 63.0581ms - 200
+2025-06-02 16:05:08.327 +02:00 [INF] End processing HTTP request after 63.218ms - 200
+2025-06-02 16:05:08.328 +02:00 [WRN] Could not find IdentityClientConfiguration for AbpMvcClient. Either define a configuration for AbpMvcClient or set a default configuration.
+2025-06-02 16:05:08.328 +02:00 [INF] Start processing HTTP request GET https://localhost:44370/api/abp/application-localization?CultureName=en&OnlyDynamics=True&api-version=1.0
+2025-06-02 16:05:08.328 +02:00 [INF] Sending HTTP request GET https://localhost:44370/api/abp/application-localization?CultureName=en&OnlyDynamics=True&api-version=1.0
+2025-06-02 16:05:08.348 +02:00 [INF] Received HTTP response headers after 19.9921ms - 200
+2025-06-02 16:05:08.348 +02:00 [INF] End processing HTTP request after 20.2185ms - 200
+2025-06-02 16:05:08.355 +02:00 [INF] Authorization failed. These requirements were not met:
+PermissionRequirement: Tenark.Books
+2025-06-02 16:05:08.532 +02:00 [INF] AuthenticationScheme: oidc was challenged.
+2025-06-02 16:05:08.534 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44308/Books - 302 0 null 297.4824ms

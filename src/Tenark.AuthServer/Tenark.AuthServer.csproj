@@ -4,7 +4,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>OpenId2Ids.Web</RootNamespace>
+    <RootNamespace>OpenId2Ids</RootNamespace>
     <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
@@ -15,35 +15,6 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="DistributedLock.Redis" Version="1.0.2" />
-    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
-    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
-    <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="8.0.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite" Version="3.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Volo.Abp.Autofac" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.DistributedLocking" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.Client" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.OpenIdConnect" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Http.Client.Web" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Http.Client.IdentityModel.Web" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Swashbuckle" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Identity.Web" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.TenantManagement.Web" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.SettingManagement.Web" Version="8.3.0" />
-    <ProjectReference Include="..\Tenark.HttpApi.Client\Tenark.HttpApi.Client.csproj" />
-    <ProjectReference Include="..\Tenark.HttpApi\Tenark.HttpApi.csproj" />
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Logs\**" />
@@ -59,6 +30,29 @@
     <None Update="Pages\**\*.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="8.0.4" />
+    <PackageReference Include="DistributedLock.Redis" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Autofac" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.DistributedLocking" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.Account.Web.IdentityServer" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.Account.Application" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.Account.HttpApi" Version="8.3.0" />
+    <ProjectReference Include="..\Tenark.EntityFrameworkCore\Tenark.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>
