@@ -1,0 +1,166 @@
+name: Semantic Versioning, Docker Build, Push, and Scan
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  semver:
+    runs-on: ubuntu-latest
+
+    outputs:
+      new_version: ${{ steps.bump-semver.outputs.new_version }}
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Get Latest Tag
+        id: get-latest-tag
+        uses: actions-ecosystem/action-get-latest-tag@v1
+
+      - name: Determine Version Bump Type
+        id: determine-bump-type
+        run: |
+          echo "level=patch" >> $GITHUB_ENV
+          if git log -1 --pretty=%B | grep -q 'bump: major'; then
+            echo "level=major" >> $GITHUB_ENV
+          elif git log -1 --pretty=%B | grep -q 'bump: minor'; then
+            echo "level=minor" >> $GITHUB_ENV
+          fi
+
+      - name: Bump SemVer
+        id: bump-semver
+        uses: actions-ecosystem/action-bump-semver@v1
+        with:
+          current_version: ${{ steps.get-latest-tag.outputs.tag }}
+          level: ${{ env.level }}
+
+      - name: Set New Version Output
+        id: set-new-version
+        run: echo "new_version=${{ steps.bump-semver.outputs.new_version }}" >> $GITHUB_ENV
+
+      - name: Push New Tag
+        uses: actions-ecosystem/action-push-tag@v1
+        with:
+          tag: ${{ env.new_version }}
+          message: '${{ env.new_version }}: PR #${{ github.event.pull_request.number }} ${{ github.event.pull_request.title }}'
+
+  docker:
+    needs: semver
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: 'Docker Login'
+        uses: azure/docker-login@v3
+        with:
+          login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
+
+      - name: Build and Push Docker AuthServer Image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./src/Tenark.AuthServer
+          file: ./src/Tenark.AuthServer/Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-auth-server:${{ needs.semver.outputs.new_version }}
+            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-auth-server:latest
+
+      - name: Build and Push Docker Ordering Image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./src/Tenark.DbMigrator
+          file: ./src/Tenark.DbMigrator/Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-dbmigrator:${{ needs.semver.outputs.new_version }}
+            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-dbmigrator:latest
+
+      - name: Build and Push Docker Http Api Host Image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./src/Tenark.HttpApi.Host
+          file: ./src/Tenark.HttpApi.Host/Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-httpapihost:${{ needs.semver.outputs.new_version }}
+            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-httpapihost:latest
+      - name: Build and Push Docker ControlPlane Image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./src/Tenark.Web.ControlPlane
+          file: ./src/Tenark.Web.ControlPlane/Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-controlplane:${{ needs.semver.outputs.new_version }}
+            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-controlplane:latest
+      - name: Build and Push Docker Portal Image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./src/Tenark.Web.Portal
+          file: ./src/Tenark.Web.Portal/Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-portal:${{ needs.semver.outputs.new_version }}
+            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-portal:latest
+
+
+  scan:
+    needs: docker
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Trivy Vulnerability AuthServer Scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'image'
+          image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-authserver:${{ needs.semver.outputs.new_version }}
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+      - name: Run Trivy Vulnerability DbMigrator Scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'image'
+          image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-dbmigrator:${{ needs.semver.outputs.new_version }}
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+      - name: Run Trivy Vulnerability Http Api Host Scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'image'
+          image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-httpapihost:${{ needs.semver.outputs.new_version }}
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+      - name: Run Trivy Vulnerability ControlPlane Scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'image'
+          image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-controlplane:${{ needs.semver.outputs.new_version }}
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
+      - name: Run Trivy Vulnerability Portsal Scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'image'
+          image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-portal:${{ needs.semver.outputs.new_version }}
+          format: 'table'
+          exit-code: '1'
+          ignore-unfixed: true
+          vuln-type: 'os,library'
