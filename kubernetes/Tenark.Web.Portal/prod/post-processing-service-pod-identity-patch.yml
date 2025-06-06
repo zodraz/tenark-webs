@@ -1,0 +1,8 @@
+apiVersion: aadpodidentity.k8s.io/v1
+kind: AzureIdentity
+metadata:
+  name: post-processing-service-pod-identity
+  namespace: post-processing
+spec:
+  resourceID: /subscriptions/881246f5-0b82-4b27-ad64-9628479bf6fc/resourceGroups/az-tct-ms365-prod-rg-1-002/providers/Microsoft.ManagedIdentity/userAssignedIdentities/uai-post-processing-service-prd-1-002
+  clientID: a7d0edd5-a4e7-4694-b1a5-675e0b69f568

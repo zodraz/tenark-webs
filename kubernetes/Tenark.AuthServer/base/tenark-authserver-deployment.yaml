@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ternark-authserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ternark-authserver
+  template:
+    metadata:
+      labels:
+        app: ternark-authserver
+    spec:
+      containers:
+      - name: ternark-authserver
+        image: ternark-authserver:1.0
+        env:
+        - name: APP__SELFURL
+          value: "https://localhost:8081"
+        - name: APP_CIENTURL
+          value: "http://localhost:4200"
+        - name: APP_CORSORIGINS
+          value: "https://*.OpenId2Ids.com,http://localhost:4200,https://localhost:44358,https://localhost:44370"
+        - name: APP_REDIRECTALLOWEDURLS
+          value: "http://localhost:4200,https://localhost:44382,https://localhost:44358,https://localhost:44316"  
+        - name: CONNECTIONSTRINGS__DEFAULT
+          value: "Server=(LocalDb)\\MSSQLLocalDB;Database=Tenark;Trusted_Connection=True;TrustServerCertificate=True"
+        - name: REDIS__CONFIGURATION
+          value: "127.0.0.1"
+        - name: STRINGENCRYPTION__DEFAULTPASSPHRASE
+          value: "L0Dmme8ToNOlMMIu"
+        resources:
+          limits:
+            cpu: "2"
+            memory: "2048Mi"
+          requests:
+            cpu: "0.5"
+            memory: "512Mi"

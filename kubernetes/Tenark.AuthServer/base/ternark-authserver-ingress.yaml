@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tenark-authserver-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: tenark.com
+    http:
+      paths:
+      - path: /authserver
+        pathType: Prefix
+        backend:
+          service:
+            name: tenark-authserver-service
+            port:
+              number: 8081
+  # Optional TLS (uncomment if you have a certificate)
+  # tls:
+  # - hosts:
+  #     - tenant-a.bookstore.com
+  #   secretName: tenant-a-tls

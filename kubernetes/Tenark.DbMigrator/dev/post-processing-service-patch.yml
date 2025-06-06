@@ -1,0 +1,15 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: post-processing-service
+  namespace: post-processing
+spec:
+  template:
+    spec:
+      containers:
+        - name: post-processing-service
+          env:
+            - name: APP_RESOURCE_GROUP
+              value: "az-tct-ms365-poc-rg"
+            - name: APP_CONFIGURATION_ENDPOINT
+              value: "https://app-config-ms365-poc.azconfig.io"
