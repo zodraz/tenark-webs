@@ -2,7 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - post-processing-namespace.yml
-  - post-processing-service.yml
-  - post-processing-service-pod-identity.yml
-  - post-processing-service-pod-identity-binding.yml
+  - tenark-web-portal-deployment.yml
+  - tenark-web-portal-service.yml
+  - tenark-web-portal-ingress.yml

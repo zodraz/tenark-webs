@@ -3,5 +3,4 @@ kind: Kustomization
 bases:
   - ../base
 patchesStrategicMerge:
-  - post-processing-service-patch.yml
-  - post-processing-service-pod-identity-patch.yml
+  - tenark-httpapi-host-deployment-patch.yaml

@@ -3,4 +3,4 @@ kind: Kustomization
 bases:
   - ../base
 patchesStrategicMerge:
-  - ternark-authserver-db-credentials-patch.yaml
+  - tenark-authserver-deployment-patch.yaml

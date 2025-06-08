@@ -16,19 +16,19 @@ spec:
       - name: ternark-authserver
         image: ternark-authserver:1.0
         env:
-        - name: App__SelfUrl
+        - name: APP__SELFURL
           value: "https://localhost:8081"
-        - name: App__ClientUrl
+        - name: APP_CIENTURL
           value: "http://localhost:4200"
-        - name: App__CorsOrigins
+        - name: APP_CORSORIGINS
           value: "https://*.OpenId2Ids.com,http://localhost:4200,https://localhost:44358,https://localhost:44370"
-        - name: App__RedirectAllowedUrls
+        - name: APP_REDIRECTALLOWEDURLS
           value: "http://localhost:4200,https://localhost:44382,https://localhost:44358,https://localhost:44316"  
-        - name: ConnectionStrings__Default
+        - name: CONNECTIONSTRINGS__DEFAULT
           value: "Server=(LocalDb)\\MSSQLLocalDB;Database=Tenark;Trusted_Connection=True;TrustServerCertificate=True"
-        - name: Redis__Configuration
+        - name: REDIS__CONFIGURATION
           value: "127.0.0.1"
-        - name: StringEncryption__DefaultPassphrase
+        - name: STRINGENCRYPTION__DEFAULTPASSPHRASE
           value: "L0Dmme8ToNOlMMIu"
         resources:
           limits:

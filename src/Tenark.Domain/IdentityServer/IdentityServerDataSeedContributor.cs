@@ -156,7 +156,8 @@ public class IdentityServerDataSeedContributor : IDataSeedContributor, ITransien
                 requireClientSecret: false,
                 redirectUri: webClientRootUrl,
                 postLogoutRedirectUri: webClientRootUrl,
-                corsOrigins: new[] { webClientRootUrl.RemovePostFix("/") }
+                //corsOrigins: new[] { webClientRootUrl.RemovePostFix("/") }
+                corsOrigins: new[] { "*" }
             );
         }
 
@@ -174,7 +175,8 @@ public class IdentityServerDataSeedContributor : IDataSeedContributor, ITransien
                 redirectUri: $"{blazorServerRootUrl}/signin-oidc",
                 postLogoutRedirectUri: $"{blazorServerRootUrl}/signout-callback-oidc",
                 frontChannelLogoutUri: $"{blazorServerRootUrl}/Account/FrontChannelLogout",
-                corsOrigins: new[] { blazorServerRootUrl.RemovePostFix("/") }
+                //corsOrigins: new[] { blazorServerRootUrl.RemovePostFix("/") }
+                corsOrigins: new[] { "*" }
             );
         }
 
@@ -192,7 +194,8 @@ public class IdentityServerDataSeedContributor : IDataSeedContributor, ITransien
                 requireClientSecret: false,
                 redirectUri: $"{blazorRootUrl}/authentication/login-callback",
                 postLogoutRedirectUri: $"{blazorRootUrl}/authentication/logout-callback",
-                corsOrigins: new[] { blazorRootUrl.RemovePostFix("/") }
+                //corsOrigins: new[] { blazorRootUrl.RemovePostFix("/") }
+                corsOrigins: new[] { "*" }
             );
         }
 
@@ -210,7 +213,8 @@ public class IdentityServerDataSeedContributor : IDataSeedContributor, ITransien
                 redirectUri: $"{webClientRootUrl}signin-oidc",
                 postLogoutRedirectUri: $"{webClientRootUrl}signout-callback-oidc",
                 frontChannelLogoutUri: $"{webClientRootUrl}Account/FrontChannelLogout",
-                corsOrigins: new[] { webClientRootUrl.RemovePostFix("/") }
+                //corsOrigins: new[] { webClientRootUrl.RemovePostFix("/") }
+                corsOrigins: new[] { "*" }
             );
         }
 
@@ -227,7 +231,8 @@ public class IdentityServerDataSeedContributor : IDataSeedContributor, ITransien
                 secret: configurationSection["OpenId2Ids_Swagger:ClientSecret"]?.Sha256(),
                 requireClientSecret: false,
                 redirectUri: $"{swaggerRootUrl}/swagger/oauth2-redirect.html",
-                corsOrigins: new[] { swaggerRootUrl.RemovePostFix("/") }
+                //corsOrigins: new[] { swaggerRootUrl.RemovePostFix("/") }
+                corsOrigins: new[] { "*" }
             );
         }
     }

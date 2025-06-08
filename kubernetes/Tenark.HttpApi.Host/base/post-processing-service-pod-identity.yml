@@ -1,9 +1,0 @@
-apiVersion: aadpodidentity.k8s.io/v1
-kind: AzureIdentity
-metadata:
-  name: post-processing-service-pod-identity
-  namespace: post-processing
-spec:
-  type: 0 # 0 means User-assigned MSI
-  resourceID: /subscriptions/9028ae83-ad90-4d88-8588-f3f7d8988c5e/resourceGroups/az-tct-ms365-poc-rg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/user-assigned-managed-identity-post-processing-service-poc
-  clientID: e3ffbbb6-fb2f-4a15-98e0-1848a2a5a3bc

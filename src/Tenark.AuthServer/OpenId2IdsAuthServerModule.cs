@@ -125,17 +125,18 @@ public class OpenId2IdsAuthServerModule : AbpModule
             options.AddDefaultPolicy(builder =>
             {
                 builder
-                    .WithOrigins(
-                        configuration["App:CorsOrigins"]
-                            .Split(",", StringSplitOptions.RemoveEmptyEntries)
-                            .Select(o => o.RemovePostFix("/"))
-                            .ToArray()
-                    )
+                    //.AllowAnyOrigin()
+                    //.WithOrigins(
+                    //    configuration["App:CorsOrigins"]
+                    //        .Split(",", StringSplitOptions.RemoveEmptyEntries)
+                    //        .Select(o => o.RemovePostFix("/"))
+                    //        .ToArray()
+                    //)
                     .WithAbpExposedHeaders()
                     .SetIsOriginAllowedToAllowWildcardSubdomains()
                     .AllowAnyHeader()
-                    .AllowAnyMethod()
-                    .AllowCredentials();
+                    .AllowAnyMethod();
+                    //.AllowCredentials();
             });
         });
     }

@@ -3,18 +3,10 @@ kind: Deployment
 metadata:
   name: ternark-authserver
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: ternark-authserver
   template:
-    metadata:
-      labels:
-        app: ternark-authserver
     spec:
       containers:
       - name: ternark-authserver
-        image: ternark-authserver:1.0
         env:
         - name: App__SelfUrl
           value: "https://localhost:8081"

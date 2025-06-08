@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ternark-authserver
+  name: ternark-httpapi-host
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ternark-authserver
+      app: ternark-httpapi-host
   template:
     metadata:
       labels:
-        app: ternark-authserver
+        app: ternark-httpapi-host
     spec:
       containers:
-      - name: ternark-authserver
-        image: ternark-authserver:1.0
+      - name: ternark-httpapi-host
+        image: ternark-httpapi-host:1.0
         env:
-        - name: App__SelfUrl
-          value: "https://localhost:8081"
-        - name: App__ClientUrl
-          value: "http://localhost:4200"
         - name: App__CorsOrigins
-          value: "https://*.OpenId2Ids.com,http://localhost:4200,https://localhost:44358,https://localhost:44370"
-        - name: App__RedirectAllowedUrls
-          value: "http://localhost:4200,https://localhost:44382,https://localhost:44358,https://localhost:44316"  
+          value: "*"
         - name: ConnectionStrings__Default
           value: "Server=(LocalDb)\\MSSQLLocalDB;Database=Tenark;Trusted_Connection=True;TrustServerCertificate=True"
         - name: Redis__Configuration
           value: "127.0.0.1"
+        - name: AuthServer__Authority
+          value: "https://localhost:44311"
+        - name: AuthServer__RequireHttpsMetadata
+          value: "true"
+        - name: AuthServer__SwaggerClientId
+          value: "OpenId2Ids_Swagger"
         - name: StringEncryption__DefaultPassphrase
           value: "L0Dmme8ToNOlMMIu"
         resources:
