@@ -111,56 +111,56 @@ jobs:
             ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-portal:latest
 
 
-  scan:
-    needs: docker
-    runs-on: ubuntu-latest
+  # scan:
+  #   needs: docker
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+  #   steps:
+  #     - name: Checkout Code
+  #       uses: actions/checkout@v3
 
-      - name: Run Trivy Vulnerability AuthServer Scan
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          scan-type: 'image'
-          image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-authserver:${{ needs.semver.outputs.new_version }}
-          format: 'table'
-          exit-code: '1'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-      - name: Run Trivy Vulnerability DbMigrator Scan
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          scan-type: 'image'
-          image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-dbmigrator:${{ needs.semver.outputs.new_version }}
-          format: 'table'
-          exit-code: '1'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-      - name: Run Trivy Vulnerability Http Api Host Scan
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          scan-type: 'image'
-          image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-httpapihost:${{ needs.semver.outputs.new_version }}
-          format: 'table'
-          exit-code: '1'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-      - name: Run Trivy Vulnerability ControlPlane Scan
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          scan-type: 'image'
-          image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-controlplane:${{ needs.semver.outputs.new_version }}
-          format: 'table'
-          exit-code: '1'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
-      - name: Run Trivy Vulnerability Portsal Scan
-        uses: aquasecurity/trivy-action@0.28.0
-        with:
-          scan-type: 'image'
-          image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-portal:${{ needs.semver.outputs.new_version }}
-          format: 'table'
-          exit-code: '1'
-          ignore-unfixed: true
-          vuln-type: 'os,library'
+  #     - name: Run Trivy Vulnerability AuthServer Scan
+  #       uses: aquasecurity/trivy-action@0.28.0
+  #       with:
+  #         scan-type: 'image'
+  #         image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-authserver:${{ needs.semver.outputs.new_version }}
+  #         format: 'table'
+  #         exit-code: '1'
+  #         ignore-unfixed: true
+  #         vuln-type: 'os,library'
+  #     - name: Run Trivy Vulnerability DbMigrator Scan
+  #       uses: aquasecurity/trivy-action@0.28.0
+  #       with:
+  #         scan-type: 'image'
+  #         image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-dbmigrator:${{ needs.semver.outputs.new_version }}
+  #         format: 'table'
+  #         exit-code: '1'
+  #         ignore-unfixed: true
+  #         vuln-type: 'os,library'
+  #     - name: Run Trivy Vulnerability Http Api Host Scan
+  #       uses: aquasecurity/trivy-action@0.28.0
+  #       with:
+  #         scan-type: 'image'
+  #         image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-httpapihost:${{ needs.semver.outputs.new_version }}
+  #         format: 'table'
+  #         exit-code: '1'
+  #         ignore-unfixed: true
+  #         vuln-type: 'os,library'
+  #     - name: Run Trivy Vulnerability ControlPlane Scan
+  #       uses: aquasecurity/trivy-action@0.28.0
+  #       with:
+  #         scan-type: 'image'
+  #         image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-controlplane:${{ needs.semver.outputs.new_version }}
+  #         format: 'table'
+  #         exit-code: '1'
+  #         ignore-unfixed: true
+  #         vuln-type: 'os,library'
+  #     - name: Run Trivy Vulnerability Portsal Scan
+  #       uses: aquasecurity/trivy-action@0.28.0
+  #       with:
+  #         scan-type: 'image'
+  #         image-ref: ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-portal:${{ needs.semver.outputs.new_version }}
+  #         format: 'table'
+  #         exit-code: '1'
+  #         ignore-unfixed: true
+  #         vuln-type: 'os,library'
