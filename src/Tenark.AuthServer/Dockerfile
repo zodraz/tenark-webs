@@ -20,7 +20,7 @@ COPY ["src/Tenark.EntityFrameworkCore/Tenark.EntityFrameworkCore.csproj", "src/T
 COPY ["src/Tenark.Domain/Tenark.Domain.csproj", "src/Tenark.Domain/"]
 RUN dotnet restore "./src/Tenark.AuthServer/Tenark.AuthServer.csproj"
 COPY . .
-WORKDIR "/src/src/Tenark.AuthServer"
+WORKDIR "/src/Tenark.AuthServer"
 RUN dotnet build "./Tenark.AuthServer.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
