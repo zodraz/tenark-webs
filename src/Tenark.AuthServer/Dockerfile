@@ -18,7 +18,7 @@ COPY ["src/Tenark.Application.Contracts/Tenark.Application.Contracts.csproj", "s
 COPY ["src/Tenark.Domain.Shared/Tenark.Domain.Shared.csproj", "src/Tenark.Domain.Shared/"]
 COPY ["src/Tenark.EntityFrameworkCore/Tenark.EntityFrameworkCore.csproj", "src/Tenark.EntityFrameworkCore/"]
 COPY ["src/Tenark.Domain/Tenark.Domain.csproj", "src/Tenark.Domain/"]
-RUN dotnet restore "./src/Tenark.AuthServer/Tenark.AuthServer.csproj"
+RUN dotnet restore "Tenark.AuthServer.csproj"
 COPY . /src
 WORKDIR "/src/Tenark.AuthServer"
 RUN dotnet build "./Tenark.AuthServer.csproj" -c $BUILD_CONFIGURATION -o /app/build
