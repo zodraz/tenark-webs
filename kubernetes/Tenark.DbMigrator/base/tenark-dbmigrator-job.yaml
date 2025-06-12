@@ -1,0 +1,41 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: tenark-dbmigrator
+spec:
+  template:
+    spec:
+      containers:
+      - name: tenark-dbmigrator
+        image: tenark-dbmigrator:1.0
+        command: ["migrate=true"]
+        env: 
+        - name: ConnectionStrings__Default
+          value: "Server=(LocalDb)\\MSSQLLocalDB;Database=Tenark;Trusted_Connection=True;TrustServerCertificate=True"
+        - name: IdentityServer__Clients__Tenark__ControlPlane__ClientId
+          value: "Tenark_ControlPlane"
+        - name: IdentityServer__Clients__Tenark__ControlPlane__ClientSecret
+          value: "1q2w3e"
+        - name: IdentityServer__Clients__Tenark__ControlPlane__RootUrl
+          value: "https://localhost:44307"
+        - name: IdentityServer__Clients__Tenark__Tenark_Portal__ClientId
+          value: "Tenark_Portal"
+        - name: IdentityServer__Clients__Tenark__Tenark_Portal__ClientSecret
+          value: "1q2w3e"
+        - name: IdentityServer__Clients__Tenark__Tenark_Portal__RootUrl
+          value: "https://localhost:44308"
+        - name: IdentityServer__Clients__Tenark__OpenId2Ids_Swagger__ClientId
+          value: "OpenId2Ids_Swagger"
+        - name: IdentityServer__Clients__Tenark__OpenId2Ids_Swagger__ClientSecret
+          value: "1q2w3e"
+        - name: IdentityServer__Clients__Tenark__OpenId2Ids_Swagger__RootUrl
+          value: "44370"
+        resources:
+          limits:
+            cpu: "2"
+            memory: "2048Mi"
+          requests:
+            cpu: "0.5"
+            memory: "512Mi"
+      restartPolicy: Never
+  backoffLimit: 4
