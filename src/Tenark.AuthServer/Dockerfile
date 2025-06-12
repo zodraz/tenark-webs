@@ -12,14 +12,14 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["src/Tenark.AuthServer/Tenark.AuthServer.csproj", "src/Tenark.AuthServer/"]
-COPY ["src/Tenark.DbMigrator/Tenark.DbMigrator.csproj", "src/Tenark.DbMigrator/"]
-COPY ["src/Tenark.Application.Contracts/Tenark.Application.Contracts.csproj", "src/Tenark.Application.Contracts/"]
-COPY ["src/Tenark.Domain.Shared/Tenark.Domain.Shared.csproj", "src/Tenark.Domain.Shared/"]
-COPY ["src/Tenark.EntityFrameworkCore/Tenark.EntityFrameworkCore.csproj", "src/Tenark.EntityFrameworkCore/"]
-COPY ["src/Tenark.Domain/Tenark.Domain.csproj", "src/Tenark.Domain/"]
-RUN dotnet restore "Tenark.AuthServer.csproj"
-COPY . /src
+COPY ["src/Tenark.AuthServer/Tenark.AuthServer.csproj", "Tenark.AuthServer/"]
+COPY ["src/Tenark.DbMigrator/Tenark.DbMigrator.csproj", "Tenark.DbMigrator/"]
+COPY ["src/Tenark.Application.Contracts/Tenark.Application.Contracts.csproj", "Tenark.Application.Contracts/"]
+COPY ["src/Tenark.Domain.Shared/Tenark.Domain.Shared.csproj", "Tenark.Domain.Shared/"]
+COPY ["src/Tenark.EntityFrameworkCore/Tenark.EntityFrameworkCore.csproj", "Tenark.EntityFrameworkCore/"]
+COPY ["src/Tenark.Domain/Tenark.Domain.csproj", "Tenark.Domain/"]
+RUN dotnet restore "Tenark.AuthServer/Tenark.AuthServer.csproj"
+COPY . .
 WORKDIR "/src/Tenark.AuthServer"
 RUN dotnet build "./Tenark.AuthServer.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
