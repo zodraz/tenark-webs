@@ -63,35 +63,35 @@ jobs:
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
-      - name: Build and Push Docker AuthServer Image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          file: ./src/Tenark.AuthServer/Dockerfile
-          push: true
-          tags: |
-            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-auth-server:${{ needs.semver.outputs.new_version }}
-            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-auth-server:latest
+      # - name: Build and Push Docker AuthServer Image
+      #   uses: docker/build-push-action@v6
+      #   with:
+      #     context: .
+      #     file: ./src/Tenark.AuthServer/Dockerfile
+      #     push: true
+      #     tags: |
+      #       ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-auth-server:${{ needs.semver.outputs.new_version }}
+      #       ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-auth-server:latest
 
-      - name: Build and Push Docker Ordering Image
-        uses: docker/build-push-action@v6
-        with:
-          context: ./src/Tenark.DbMigrator
-          file: ./src/Tenark.DbMigrator/Dockerfile
-          push: true
-          tags: |
-            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-dbmigrator:${{ needs.semver.outputs.new_version }}
-            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-dbmigrator:latest
+      # - name: Build and Push Docker Ordering Image
+      #   uses: docker/build-push-action@v6
+      #   with:
+      #     context: ./src/Tenark.DbMigrator
+      #     file: ./src/Tenark.DbMigrator/Dockerfile
+      #     push: true
+      #     tags: |
+      #       ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-dbmigrator:${{ needs.semver.outputs.new_version }}
+      #       ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-dbmigrator:latest
 
-      - name: Build and Push Docker Http Api Host Image
-        uses: docker/build-push-action@v6
-        with:
-          context: ./src/Tenark.HttpApi.Host
-          file: ./src/Tenark.HttpApi.Host/Dockerfile
-          push: true
-          tags: |
-            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-httpapihost:${{ needs.semver.outputs.new_version }}
-            ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-httpapihost:latest
+      # - name: Build and Push Docker Http Api Host Image
+      #   uses: docker/build-push-action@v6
+      #   with:
+      #     context: ./src/Tenark.HttpApi.Host
+      #     file: ./src/Tenark.HttpApi.Host/Dockerfile
+      #     push: true
+      #     tags: |
+      #       ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-httpapihost:${{ needs.semver.outputs.new_version }}
+      #       ${{ secrets.REGISTRY_LOGIN_SERVER }}/tenark-httpapihost:latest
       - name: Build and Push Docker ControlPlane Image
         uses: docker/build-push-action@v6
         with:
