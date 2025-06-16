@@ -95,7 +95,7 @@ jobs:
       - name: Build and Push Docker ControlPlane Image
         uses: docker/build-push-action@v6
         with:
-          context: ./src/Tenark.Web.ControlPlane
+          context: .
           file: ./src/Tenark.Web.ControlPlane/Dockerfile
           push: true
           tags: |
