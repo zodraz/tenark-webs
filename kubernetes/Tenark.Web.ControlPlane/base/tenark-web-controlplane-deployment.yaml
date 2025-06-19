@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ternark-web-controlplane
-        image: ternark-web-controlplane:1.0
+        image: ternark-web-controlplane:v0.0.17
         env:
         - name: App__SelfUrl
           value: "https://localhost:44307"

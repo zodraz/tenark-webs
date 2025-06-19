@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ternark-web-portal
-        image: ternark-web-portal:1.0
+        image: ternark-web-portal:v0.0.17
         env:
         - name: App__SelfUrl
           value: "https://localhost:44308"

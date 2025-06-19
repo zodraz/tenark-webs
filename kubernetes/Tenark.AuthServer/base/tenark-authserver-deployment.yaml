@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ternark-authserver
-        image: ternark-authserver:1.0
+        image: ternark-authserver:v0.0.17
         env:
         - name: App__SelfUrl
           value: "https://localhost:8081"

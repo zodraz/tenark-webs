@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ternark-httpapi-host
-        image: ternark-httpapi-host:1.0
+        image: ternark-httpapi-host:v0.0.17
         env:
         - name: App__CorsOrigins
           value: "*"

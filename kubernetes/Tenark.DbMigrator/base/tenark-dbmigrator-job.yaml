@@ -7,7 +7,7 @@ spec:
     spec:
       containers:
       - name: tenark-dbmigrator
-        image: tenark-dbmigrator:1.0
+        image: tenark-dbmigrator:v0.0.17
         command: ["migrate=true"]
         env: 
         - name: ConnectionStrings__Default
