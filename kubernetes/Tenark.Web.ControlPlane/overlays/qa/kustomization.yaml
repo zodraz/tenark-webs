@@ -3,4 +3,4 @@ kind: Kustomization
 bases:
   - ../../base
 patchesStrategicMerge:
-  - tenark-web-controlplane-deployment-patch.yml
+  - tenark-web-controlplane-deployment-patch.yaml

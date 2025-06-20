@@ -2,6 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - tenark-web-portal-deployment.yml
-  - tenark-web-portal-service.yml
-  - tenark-web-portal-ingress.yml
+  - tenark-web-portal-deployment.yaml
+  - tenark-web-portal-service.yaml
+  - tenark-web-portal-ingress.yaml

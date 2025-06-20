@@ -2,6 +2,6 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - tenark-httpapi-host-deployment.yml
-  - tenark-httpapi-host-service.yml
-  - tenark-httpapi-host-ingress.yml
+  - tenark-httpapi-host-deployment.yaml
+  - tenark-httpapi-host-service.yaml
+  - tenark-httpapi-host-ingress.yaml

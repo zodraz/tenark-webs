@@ -3,4 +3,4 @@ kind: Kustomization
 bases:
   - ../../base
 patchesStrategicMerge:
-  - tenark-web-portal-deployment-patch.yml
+  - tenark-web-portal-deployment-patch.yaml

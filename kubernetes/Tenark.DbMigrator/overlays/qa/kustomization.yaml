@@ -3,4 +3,4 @@ kind: Kustomization
 bases:
   - ../../base
 patchesStrategicMerge:
-  - tenark-dbmigrator-job-patch.yml
+  - tenark-dbmigrator-job-patch.yaml
