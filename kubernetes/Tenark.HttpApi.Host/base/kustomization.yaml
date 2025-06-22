@@ -4,4 +4,3 @@ kind: Kustomization
 resources:
   - tenark-httpapi-host-deployment.yaml
   - tenark-httpapi-host-service.yaml
-  - tenark-httpapi-host-ingress.yaml

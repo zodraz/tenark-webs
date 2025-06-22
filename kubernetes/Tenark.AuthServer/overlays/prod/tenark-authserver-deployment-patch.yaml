@@ -9,7 +9,7 @@ spec:
       - name: ternark-authserver
         env:
         - name: App__SelfUrl
-          value: "https://localhost:8081"
+          value: "https://tenark.com/authserver"
         - name: App__ClientUrl
           value: "http://localhost:4200"
         - name: App__CorsOrigins

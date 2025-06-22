@@ -11,13 +11,13 @@ spec:
         - name: App__SelfUrl
           value: "https://localhost:44308"
         - name: RemoteServices__Default__BaseUrl
-          value: "https://localhost:44370/"
+          value: "https://prod.tenark.com/httpapi-host/"
         - name: ConnectionStrings__Default
           value: "Server=(LocalDb)\\MSSQLLocalDB;Database=Tenark;Trusted_Connection=True;TrustServerCertificate=True"
         - name: Redis__Configuration
           value: "127.0.0.1"
         - name: AuthServer__Authority
-          value: "https://localhost:44311"
+          value: "https://qa.tenark.com/authserver"
         - name: AuthServer__RequireHttpsMetadata
           value: "true"
         - name: AuthServer__ClientId

@@ -4,4 +4,3 @@ kind: Kustomization
 resources:
   - tenark-web-portal-deployment.yaml
   - tenark-web-portal-service.yaml
-  - tenark-web-portal-ingress.yaml

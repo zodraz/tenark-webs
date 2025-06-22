@@ -4,4 +4,3 @@ kind: Kustomization
 resources:
   - tenark-authserver-deployment.yaml
   - tenark-authserver-service.yaml
-  - tenark-authserver-ingress.yaml
