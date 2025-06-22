@@ -3,7 +3,7 @@ kind: Kustomization
 resources:
   - ../../base
 patches: 
-  - path: tenark-authserver-deployment-patch.yaml
+  - path: tenark-authserver-deployment.yaml
     target:
       kind: Deployment
       name: ternark-authserver
