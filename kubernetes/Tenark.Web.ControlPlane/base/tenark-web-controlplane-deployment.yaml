@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ternark-web-controlplane
-        image: tenark.azurecr.io/ternark-web-controlplane:v0.0.17
+        image: tenark.azurecr.io/tenark-controlplane:v0.0.17
         env:
         - name: App__SelfUrl
           value: "https://dev.tenark.com/controlplane"
