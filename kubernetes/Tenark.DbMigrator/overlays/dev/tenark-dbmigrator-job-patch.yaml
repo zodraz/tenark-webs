@@ -1,5 +1,7 @@
 apiVersion: batch/v1
 kind: Job
+metadata:
+  name: tenark-dbmigrator
 spec:
   template:
     spec:
