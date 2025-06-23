@@ -19,7 +19,7 @@ spec:
         - name: ConnectionStrings__Default
           value: "Server=(LocalDb)\\MSSQLLocalDB;Database=Tenark;Trusted_Connection=True;TrustServerCertificate=True"
         - name: Redis__Configuration
-          value: "127.0.0.1"
+          value: "redis-tenark-tenant-common-dev.redis.cache.windows.net"
         - name: StringEncryption__DefaultPassphrase
           value: "L0Dmme8ToNOlMMIu"
         # resources:
