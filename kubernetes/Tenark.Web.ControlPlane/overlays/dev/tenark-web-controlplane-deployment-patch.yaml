@@ -22,7 +22,7 @@ spec:
         - name: ConnectionStrings__Default
           value: "Server=(LocalDb)\\MSSQLLocalDB;Database=Tenark;Trusted_Connection=True;TrustServerCertificate=True"
         - name: Redis__Configuration
-          value: "redis-tenark-tenant-common-dev.redis.cache.windows.net"
+          value: "redis-tenark-tenant-common-dev.redis.cache.windows.net:6380,password=YPOztmqoqw0gDjQbrGnHTpDGDtyPWeE85AzCaJqSLpQ=,ssl=True,abortConnect=False"
         - name: AuthServer__Authority
           value: "https://dev.tenark.com/authserver"
         - name: AuthServer__RequireHttpsMetadata
