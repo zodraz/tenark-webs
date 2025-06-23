@@ -16,7 +16,7 @@ spec:
       - name: ternark-web-controlplane
         env:
         - name: App__SelfUrl
-          value: "https://controlplane.tenark.com"
+          value: "https://dev.tenark.com/controlplane"
         - name: RemoteServices__Default__BaseUrl
           value: "https://dev.tenark.com/httpapi-host/"
         - name: ConnectionStrings__Default

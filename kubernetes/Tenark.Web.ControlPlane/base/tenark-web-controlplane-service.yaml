@@ -4,7 +4,7 @@ metadata:
   name: tenark-web-controlplane-service
 spec:
   selector:
-    app: tenark-web-controlplane-service
+    app: tenark-web-controlplane
   ports:
     - port: 8080
       targetPort: 8080

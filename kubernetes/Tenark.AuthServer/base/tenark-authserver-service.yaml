@@ -4,7 +4,7 @@ metadata:
   name: tenark-authserver-service
 spec:
   selector:
-    app: tenark-authserver-service
+    app: tenark-authserver
   ports:
     - port: 8080
       targetPort: 8080

@@ -4,7 +4,7 @@ metadata:
   name: tenark-web-portal-service
 spec:
   selector:
-    app: tenark-web-portal-service
+    app: tenark-web-portal
   ports:
     - port: 8080
       targetPort: 8080

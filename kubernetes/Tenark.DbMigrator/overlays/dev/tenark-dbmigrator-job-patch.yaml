@@ -15,13 +15,13 @@ spec:
         - name: IdentityServer__Clients__Tenark__ControlPlane__ClientSecret
           value: "1q2w3e"
         - name: IdentityServer__Clients__Tenark__ControlPlane__RootUrl
-          value: "https://controlplane.tenark.com"
+          value: "https://dev.tenark.com/controlplane"
         - name: IdentityServer__Clients__Tenark__Tenark_Portal__ClientId
           value: "Tenark_Portal"
         - name: IdentityServer__Clients__Tenark__Tenark_Portal__ClientSecret
           value: "1q2w3e"
         - name: IdentityServer__Clients__Tenark__Tenark_Portal__RootUrl
-          value: "https://portal.tenark.com"
+          value: "https://dev.tenark.com/portal"
         - name: IdentityServer__Clients__Tenark__OpenId2Ids_Swagger__ClientId
           value: "OpenId2Ids_Swagger"
         - name: IdentityServer__Clients__Tenark__OpenId2Ids_Swagger__ClientSecret
