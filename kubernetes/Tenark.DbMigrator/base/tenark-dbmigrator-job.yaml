@@ -8,7 +8,6 @@ spec:
       containers:
       - name: tenark-dbmigrator
         image: tenark.azurecr.io/tenark-dbmigrator:v0.0.17
-        command: ["migrate=true"]
         env: 
         - name: ConnectionStrings__Default
           value: "Server=(LocalDb)\\MSSQLLocalDB;Database=Tenark;Trusted_Connection=True;TrustServerCertificate=True"
