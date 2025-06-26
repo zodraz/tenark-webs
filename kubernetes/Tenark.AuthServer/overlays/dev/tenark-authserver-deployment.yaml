@@ -19,7 +19,7 @@ spec:
         - name: ConnectionStrings__Default
           value: "Server=tcp:tenark-sqlserver-dev.database.windows.net,1433;Initial Catalog=sqldb-tenark-tenant-common-dev;Persist Security Info=False;User ID=4dm1n157r470r;Password=sKaBq68#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
         - name: Redis__Configuration
-          value: "redis-tenark-tenant-common-dev.redis.cache.windows.net:6380,password=YPOztmqoqw0gDjQbrGnHTpDGDtyPWeE85AzCaJqSLpQ=,ssl=True,abortConnect=False"
+          value: "redis-tenark-tenant-common-dev.redis.cache.windows.net:6380,password=ixHxgIDElI6UcoX731KnxNDA3S3ysPEqJAzCaJiAbW4=,ssl=True,abortConnect=False"
         - name: StringEncryption__DefaultPassphrase
           value: "L0Dmme8ToNOlMMIu"
         # resources:
