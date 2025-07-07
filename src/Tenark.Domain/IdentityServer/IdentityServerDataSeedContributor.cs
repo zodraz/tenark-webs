@@ -142,74 +142,36 @@ public class IdentityServerDataSeedContributor : IDataSeedContributor, ITransien
 
         var configurationSection = _configuration.GetSection("IdentityServer:Clients");
 
-        //Console Test / Angular Client
-        var consoleAndAngularClientId = configurationSection["OpenId2Ids_App:ClientId"];
-        if (!consoleAndAngularClientId.IsNullOrWhiteSpace())
-        {
-            var webClientRootUrl = configurationSection["OpenId2Ids_App:RootUrl"]?.TrimEnd('/');
-
-            await CreateClientAsync(
-                name: consoleAndAngularClientId,
-                scopes: commonScopes,
-                grantTypes: new[] { "password", "client_credentials", "authorization_code" },
-                secret: (configurationSection["OpenId2Ids_App:ClientSecret"] ?? "1q2w3e*").Sha256(),
-                requireClientSecret: false,
-                redirectUri: webClientRootUrl,
-                postLogoutRedirectUri: webClientRootUrl,
-                //corsOrigins: new[] { webClientRootUrl.RemovePostFix("/") }
-                corsOrigins: new[] { "*" }
-            );
-        }
-
-        // Blazor Server Client
-        var blazorServerClientId = configurationSection["OpenId2Ids_BlazorServerTiered:ClientId"];
-        if (!blazorServerClientId.IsNullOrWhiteSpace())
-        {
-            var blazorServerRootUrl = configurationSection["OpenId2Ids_BlazorServerTiered:RootUrl"].TrimEnd('/');
-
-            await CreateClientAsync(
-                name: blazorServerClientId,
-                scopes: commonScopes,
-                grantTypes: new[] { "hybrid" },
-                secret: (configurationSection["OpenId2Ids_BlazorServerTiered:ClientSecret"] ?? "1q2w3e*").Sha256(),
-                redirectUri: $"{blazorServerRootUrl}/signin-oidc",
-                postLogoutRedirectUri: $"{blazorServerRootUrl}/signout-callback-oidc",
-                frontChannelLogoutUri: $"{blazorServerRootUrl}/Account/FrontChannelLogout",
-                //corsOrigins: new[] { blazorServerRootUrl.RemovePostFix("/") }
-                corsOrigins: new[] { "*" }
-            );
-        }
-
-        // Blazor Client
-        var blazorClientId = configurationSection["OpenId2Ids_Blazor:ClientId"];
-        if (!blazorClientId.IsNullOrWhiteSpace())
-        {
-            var blazorRootUrl = configurationSection["OpenId2Ids_Blazor:RootUrl"].TrimEnd('/');
-
-            await CreateClientAsync(
-                name: blazorClientId,
-                scopes: commonScopes,
-                grantTypes: new[] { "authorization_code" },
-                secret: configurationSection["OpenId2Ids_Blazor:ClientSecret"]?.Sha256(),
-                requireClientSecret: false,
-                redirectUri: $"{blazorRootUrl}/authentication/login-callback",
-                postLogoutRedirectUri: $"{blazorRootUrl}/authentication/logout-callback",
-                //corsOrigins: new[] { blazorRootUrl.RemovePostFix("/") }
-                corsOrigins: new[] { "*" }
-            );
-        }
-
-        //Web Client
-        var webClientId = configurationSection["OpenId2Ids_Web:ClientId"];
+        //Tenark_ControlPlane
+        var webClientId = configurationSection["Tenark_ControlPlane:ClientId"];
         if (!webClientId.IsNullOrWhiteSpace())
         {
-            var webClientRootUrl = configurationSection["OpenId2Ids_Web:RootUrl"].EnsureEndsWith('/');
+            var webClientRootUrl = configurationSection["Tenark_ControlPlane:RootUrl"].EnsureEndsWith('/');
 
             await CreateClientAsync(
                 name: webClientId,
                 scopes: commonScopes,
                 grantTypes: new[] { "hybrid" },
-                secret: (configurationSection["OpenId2Ids_Web:ClientSecret"] ?? "1q2w3e*").Sha256(),
+                secret: (configurationSection["Tenark_ControlPlane:ClientSecret"] ?? "1q2w3e*").Sha256(),
+                redirectUri: $"{webClientRootUrl}signin-oidc",
+                postLogoutRedirectUri: $"{webClientRootUrl}signout-callback-oidc",
+                frontChannelLogoutUri: $"{webClientRootUrl}Account/FrontChannelLogout",
+                //corsOrigins: new[] { webClientRootUrl.RemovePostFix("/") }
+                corsOrigins: new[] { "*" }
+            );
+        }
+
+        //Tenark_Portal
+        webClientId = configurationSection["Tenark_Portal:ClientId"];
+        if (!webClientId.IsNullOrWhiteSpace())
+        {
+            var webClientRootUrl = configurationSection["Tenark_Portal:RootUrl"].EnsureEndsWith('/');
+
+            await CreateClientAsync(
+                name: webClientId,
+                scopes: commonScopes,
+                grantTypes: new[] { "hybrid" },
+                secret: (configurationSection["Tenark_Portal:ClientSecret"] ?? "1q2w3e*").Sha256(),
                 redirectUri: $"{webClientRootUrl}signin-oidc",
                 postLogoutRedirectUri: $"{webClientRootUrl}signout-callback-oidc",
                 frontChannelLogoutUri: $"{webClientRootUrl}Account/FrontChannelLogout",
@@ -219,16 +181,16 @@ public class IdentityServerDataSeedContributor : IDataSeedContributor, ITransien
         }
 
         // Swagger Client
-        var swaggerClientId = configurationSection["OpenId2Ids_Swagger:ClientId"];
+        var swaggerClientId = configurationSection["Tenark_HttpApiHost:ClientId"];
         if (!swaggerClientId.IsNullOrWhiteSpace())
         {
-            var swaggerRootUrl = configurationSection["OpenId2Ids_Swagger:RootUrl"].TrimEnd('/');
+            var swaggerRootUrl = configurationSection["Tenark_HttpApiHost:RootUrl"].TrimEnd('/');
 
             await CreateClientAsync(
                 name: swaggerClientId,
                 scopes: commonScopes,
                 grantTypes: new[] { "authorization_code" },
-                secret: configurationSection["OpenId2Ids_Swagger:ClientSecret"]?.Sha256(),
+                secret: configurationSection["Tenark_HttpApiHost:ClientSecret"]?.Sha256(),
                 requireClientSecret: false,
                 redirectUri: $"{swaggerRootUrl}/swagger/oauth2-redirect.html",
                 //corsOrigins: new[] { swaggerRootUrl.RemovePostFix("/") }

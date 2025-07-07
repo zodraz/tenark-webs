@@ -10,24 +10,24 @@ spec:
         env: 
         - name: ConnectionStrings__Default
           value: "Server=tcp:tenark-sqlserver-dev.database.windows.net,1433;Initial Catalog=sqldb-tenark-tenant-common-dev;Persist Security Info=False;User ID=4dm1n157r470r;Password=sKaBq68#;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
-        - name: IdentityServer__Clients__Tenark__ControlPlane__ClientId
+        - name: IdentityServer__Clients__Tenark_ControlPlane__ClientId
           value: "Tenark_ControlPlane"
-        - name: IdentityServer__Clients__Tenark__ControlPlane__ClientSecret
+        - name: IdentityServer__Clients__Tenark_ControlPlane__ClientSecret
           value: "1q2w3e"
-        - name: IdentityServer__Clients__Tenark__ControlPlane__RootUrl
+        - name: IdentityServer__Clients__Tenark_ControlPlane__RootUrl
           value: "https://dev.tenark.com/controlplane"
-        - name: IdentityServer__Clients__Tenark__Tenark_Portal__ClientId
+        - name: IdentityServer__Clients__Tenark_Tenark_Portal__ClientId
           value: "Tenark_Portal"
-        - name: IdentityServer__Clients__Tenark__Tenark_Portal__ClientSecret
+        - name: IdentityServer__Clients__Tenark_Tenark_Portal__ClientSecret
           value: "1q2w3e"
-        - name: IdentityServer__Clients__Tenark__Tenark_Portal__RootUrl
+        - name: IdentityServer__Clients__Tenark_Tenark_Portal__RootUrl
           value: "https://dev.tenark.com/portal"
-        - name: IdentityServer__Clients__Tenark__OpenId2Ids_Swagger__ClientId
-          value: "OpenId2Ids_Swagger"
-        - name: IdentityServer__Clients__Tenark__OpenId2Ids_Swagger__ClientSecret
+        - name: IdentityServer__Clients__Tenark_HttpApiHost__ClientId
+          value: "Tenark_HttpApiHost"
+        - name: IdentityServer__Clients__Tenark_HttpApiHost__ClientSecret
           value: "1q2w3e"
-        - name: IdentityServer__Clients__Tenark__OpenId2Ids_Swagger__RootUrl
-          value: "44370"
+        - name: IdentityServer__Clients__Tenark_HttpApiHost__RootUrl
+          value: "https://dev.tenark.com/httpapi-host"
         # resources:
         #   limits:
         #     cpu: "2"

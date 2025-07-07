@@ -19,7 +19,7 @@ spec:
         - name: AuthServer__RequireHttpsMetadata
           value: "true"
         - name: AuthServer__SwaggerClientId
-          value: "OpenId2Ids_Swagger"
+          value: "Tenark_HttpApiHost"
         - name: StringEncryption__DefaultPassphrase
           value: "L0Dmme8ToNOlMMIu"
         # resources:
